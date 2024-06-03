@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GeniusKids</string>
+
+
+    <string name="default_web_client_id">1041311072923-3rr35k3i3kfhi49spalkntg54vll2qad.apps.googleusercontent.com</string>
+    <string name="google_sign_in_client_id">1041311072923-9ai9q3rmht4f7noehuua9g4p0airqiot.apps.googleusercontent.com</string>
+
+    <string name="prefs_file">com.example.geniuskids.PREFERENCE_FILE_KEY</string>
+    <string name="title_activity_cursos">Cursos</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>.
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_materias">Materias</string>
+</resources>
+
