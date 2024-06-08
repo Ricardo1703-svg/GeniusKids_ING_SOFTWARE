@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000" /> <!-- Color de fondo cuando está presionado -->
+            <corners android:radius="16dp" /> <!-- Bordes redondeados -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FF6347" /> <!-- Color de fondo por defecto -->
+            <corners android:radius="16dp" /> <!-- Bordes redondeados -->
+        </shape>
+    </item>
+</selector>
