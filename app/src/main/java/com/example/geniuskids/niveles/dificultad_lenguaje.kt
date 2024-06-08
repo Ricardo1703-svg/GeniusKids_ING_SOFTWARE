@@ -1,4 +1,4 @@
-package com.example.geniuskids
+package com.example.geniuskids.niveles
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,25 +8,27 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Ingresar_Datos
+import com.example.geniuskids.Materias
+import com.example.geniuskids.Perfil
+import com.example.geniuskids.R
 
-class Nivel : AppCompatActivity() {
-
+class dificultad_lenguaje : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_nivel)
+        setContentView(R.layout.activity_dificultad_lenguaje)
 
         val materia = intent.getStringExtra("MATERIA")
         val textViewMateria = findViewById<TextView>(R.id.textViewMateriaF)
         textViewMateria.text = materia
 
-        val Basico = findViewById<Button>(R.id.idBasico)
-        val Intermedio = findViewById<Button>(R.id.idmedio)
-        val Avanzado = findViewById<Button>(R.id.idAvanzado)
+        val Basico = findViewById<Button>(R.id.idBasicoF)
+        val Intermedio = findViewById<Button>(R.id.idIntermedioF)
+        val Avanzado = findViewById<Button>(R.id.idAvanzadoF)
 
         Basico.setOnClickListener {
-            val intent = Intent(this, MainActivityMatematica::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Basico PROXIMAMENTE", Toast.LENGTH_SHORT).show()
         }
 
         Intermedio.setOnClickListener {

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
+            android:name=".niveles.dificultad_lenguaje"
+            android:exported="false" />
+        <activity
             android:name=".Nivel"
             android:exported="false" />
         <activity

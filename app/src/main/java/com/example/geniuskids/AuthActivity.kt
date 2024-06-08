@@ -40,7 +40,7 @@ class AuthActivity : AppCompatActivity() {
         if (googleSignIn) {
             val currentUser = FirebaseAuth.getInstance().currentUser
             if (currentUser != null) {
-                val intent = Intent(this, Nivel::class.java)
+                val intent = Intent(this, Materias::class.java)
                 startActivity(intent)
                 finish()
             }
@@ -68,7 +68,7 @@ class AuthActivity : AppCompatActivity() {
                         .addOnCompleteListener(this) { task ->
                             if (task.isSuccessful) {
                                 Log.d("AuthActivity", "Inicio de sesión exitoso")
-                                val intent = Intent(this, Nivel::class.java)
+                                val intent = Intent(this, Materias::class.java)
                                 startActivity(intent)
                                 finish()
                                 val editor = sharedPreferences.edit()
@@ -103,7 +103,7 @@ class AuthActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             Log.d("AnonymousLoginActivity", "Inicio de sesión anónimo exitoso")
-                            val intent = Intent(this, Nivel::class.java)
+                            val intent = Intent(this, Materias::class.java)
                             startActivity(intent)
                         } else {
                             Log.w("AnonymousLoginActivity", "Error en el inicio de sesión anónimo", task.exception)
@@ -166,7 +166,7 @@ class AuthActivity : AppCompatActivity() {
                     editor.putBoolean("googleSignIn", true)
                     editor.apply()
 
-                    val intent = Intent(this, Nivel::class.java)
+                    val intent = Intent(this, Materias::class.java)
                     startActivity(intent)
                     finish()
                 } else {

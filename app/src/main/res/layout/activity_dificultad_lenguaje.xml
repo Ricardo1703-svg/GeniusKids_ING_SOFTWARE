@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C6BFAB"
-    tools:context=".Nivel">
+    tools:context=".niveles.dificultad_lenguaje">
 
     <TextView
         android:id="@+id/textViewMateriaF"
@@ -15,12 +16,12 @@
         android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/idBasico"
+        app:layout_constraintBottom_toTopOf="@+id/idBasicoF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/idAvanzado"
+        android:id="@+id/idAvanzadoF"
         android:layout_width="168dp"
         android:layout_height="62dp"
         android:backgroundTint="#E3CF9C"
@@ -37,7 +38,7 @@
         app:layout_constraintVertical_bias="0.757" />
 
     <Button
-        android:id="@+id/idBasico"
+        android:id="@+id/idBasicoF"
         android:layout_width="168dp"
         android:layout_height="62dp"
         android:backgroundTint="#E3CF9C"
@@ -54,7 +55,7 @@
         app:layout_constraintVertical_bias="0.384" />
 
     <Button
-        android:id="@+id/idmedio"
+        android:id="@+id/idIntermedioF"
         android:layout_width="168dp"
         android:layout_height="62dp"
         android:backgroundTint="#E3CF9C"
@@ -107,5 +108,4 @@
             android:text="Menu" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

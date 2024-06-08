@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageViewsoci" />
 
         <Button
-            android:id="@+id/btnIrSocial"
+            android:id="@+id/btnIrSociales"
             android:layout_width="172dp"
             android:layout_height="100dp"
             android:backgroundTint="#00FFFFFF"
@@ -178,7 +178,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
-            android:id="@+id/btnIrsociales"
+            android:id="@+id/btnIrMatematicas"
             android:layout_width="163dp"
             android:layout_height="114dp"
             android:backgroundTint="#00D83D3D"
@@ -301,6 +301,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
+            android:id="@+id/btnHome"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
