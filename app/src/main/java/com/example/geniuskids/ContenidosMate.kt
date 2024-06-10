@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.videos.WebViewTos
 
 class ContenidosMate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

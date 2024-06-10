@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -50,8 +48,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation("com.google.firebase:firebase-auth:21.0.1")
     //-------------
-    //
-    // -------------------------
+
     // ---------------------
 
     implementation("androidx.webkit:webkit:1.8.0")

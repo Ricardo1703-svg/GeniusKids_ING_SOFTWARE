@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WebViewTos">
+    android:orientation="horizontal"
+    tools:context=".videos.WebViewTos">
 
     <WebView
-        android:id="@+id/video"
-        android:layout_width="437dp"
-        android:layout_height="325dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/regreif"
+            android:layout_width="65dp"
+            android:layout_height="46dp"
+            android:layout_x="44dp"
+            android:layout_y="36dp"
+            android:background="@drawable/border_background"
+            android:backgroundTint="#6883D3"
+            android:visibility="visible"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+    </WebView>
 
 </LinearLayout>

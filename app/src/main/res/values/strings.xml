@@ -17,11 +17,7 @@
     <string name="previous">Previous</string>
     <string name="title_activity_materias">Materias</string>
 
-    <string name="Lenguaje">Lenguaje</string>">
-    <string name="Matemáticas">Matemáticas</string>
-    <string name="Ciencias">Ciencias</string>
-    <string name="Sociales">Sociales</string>
-    <string name="Inglés">Inglés</string>
+    <string name="Video1"></string>
 
 </resources>
 

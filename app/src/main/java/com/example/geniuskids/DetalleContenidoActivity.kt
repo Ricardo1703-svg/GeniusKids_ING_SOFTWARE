@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.*
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class DetalleContenidoActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
@@ -26,8 +30,6 @@ class DetalleContenidoActivity : AppCompatActivity() {
         // Recupera el ID del contenido pasado en el Intent
         val contenidoId = intent.getStringExtra("CONTENIDO_ID")
 
-
-
         if (contenidoId != null) {
             database = FirebaseDatabase.getInstance().reference.child("contenido").child(contenidoId)
             database.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -40,7 +42,6 @@ class DetalleContenidoActivity : AppCompatActivity() {
                         tvActividad.text = it.actividad
                     }
                 }
-
                 override fun onCancelled(databaseError: DatabaseError) {
                 }
             })
