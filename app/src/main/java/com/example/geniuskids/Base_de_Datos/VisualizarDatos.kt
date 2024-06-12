@@ -1,11 +1,15 @@
-package com.example.geniuskids
+package com.example.geniuskids.Base_de_Datos
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.*
+import com.example.geniuskids.R
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class VisualizarDatos : AppCompatActivity() {
     private lateinit var database: DatabaseReference
@@ -38,7 +42,6 @@ class VisualizarDatos : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Manejar el error en la recuperación de datos
             }
         })
     }

@@ -21,19 +21,19 @@
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Nivel"
+            android:name=".niveles.Nivel"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".DetalleContenidoActivity"
+            android:name=".Base_de_Datos.DetalleContenidoActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".VisualizarDatos"
+            android:name=".Base_de_Datos.VisualizarDatos"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Ingresar_Datos"
+            android:name=".Base_de_Datos.Ingresar_Datos"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
@@ -54,7 +54,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ContenidosMate"
+            android:name=".Base_de_Datos.ContenidosMate"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -67,16 +67,16 @@
             android:label="@string/title_activity_materias"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Recuperacion"
+            android:name=".Login.Recuperacion"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.GeniusKids" />
         <activity
-            android:name=".RegistroActivity"
+            android:name=".Login.RegistroActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".Login.AuthActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

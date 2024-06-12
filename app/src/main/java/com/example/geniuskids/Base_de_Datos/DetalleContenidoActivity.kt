@@ -1,9 +1,10 @@
-package com.example.geniuskids
+package com.example.geniuskids.Base_de_Datos
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference

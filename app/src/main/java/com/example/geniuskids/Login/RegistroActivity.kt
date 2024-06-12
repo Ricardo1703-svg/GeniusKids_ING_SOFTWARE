@@ -1,7 +1,6 @@
-package com.example.geniuskids
+package com.example.geniuskids.Login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -9,6 +8,8 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.R
 import com.google.firebase.auth.FirebaseAuth
 
 class RegistroActivity : AppCompatActivity() {
@@ -60,12 +61,10 @@ class RegistroActivity : AppCompatActivity() {
     }
     private fun togglePasswordVisibility(){
         if (!passwordVisible) {
-            // Si la contraseña está oculta, mostrarla
             contraEditText.inputType = android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
             OjoMostrar.setImageResource(R.drawable.ver)
             passwordVisible = true
         }else {
-            // Si la contraseña está visible, ocultarla
             contraEditText.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
             OjoMostrar.setImageResource(R.drawable.invisible)
             passwordVisible = false

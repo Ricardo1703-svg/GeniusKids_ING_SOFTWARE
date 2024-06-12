@@ -1,19 +1,11 @@
 package com.example.geniuskids
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.firebase.auth.FirebaseAuth
+import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 
 class Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

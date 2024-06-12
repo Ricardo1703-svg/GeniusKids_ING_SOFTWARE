@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/f"
     android:screenOrientation="portrait"
-    tools:context=".Recuperacion">
+    tools:context=".Login.Recuperacion">
 
     <Button
         android:id="@+id/btnVerificar"

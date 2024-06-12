@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Base_de_Datos.DetalleContenidoActivity
+import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.videos.WebViewTos
 
 class MainActivityMatematica : AppCompatActivity() {
@@ -73,16 +75,19 @@ class MainActivityMatematica : AppCompatActivity() {
                     "encrypted-media; \n" +
                     "gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
-            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/eRy0rWJuECw?si=YiNLJKyd8uiU3VrY\"" +
+
+            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/7fJT0tFrjkg?si=jDMJsSth9-7PGvnG\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
+
             3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/XhL4XDWMhjw?si=rMZbktI8Uf7e0CF5\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
+
             4 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://www.youtube.com/embed/amgrBjEH780?si=O5AV8GyNofrCgTTH\" " +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +

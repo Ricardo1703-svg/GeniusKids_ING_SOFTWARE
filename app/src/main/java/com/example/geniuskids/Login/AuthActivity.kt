@@ -1,4 +1,4 @@
-package com.example.geniuskids
+package com.example.geniuskids.Login
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Materias
+import com.example.geniuskids.R
 import com.example.geniuskids.databinding.ActivityAuthBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient

@@ -1,4 +1,4 @@
-package com.example.geniuskids
+package com.example.geniuskids.Base_de_Datos
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.example.geniuskids.R
 
 class CustomAdapter(private val context: Context, private val contenidoList: List<Contenido>) : BaseAdapter() {
 

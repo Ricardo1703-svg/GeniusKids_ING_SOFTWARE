@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
+import com.example.geniuskids.niveles.Nivel
 import com.example.geniuskids.niveles.dificultad_lenguaje
 
 

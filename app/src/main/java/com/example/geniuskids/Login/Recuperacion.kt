@@ -1,4 +1,4 @@
-package com.example.geniuskids
+package com.example.geniuskids.Login
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.geniuskids.R
 import com.google.firebase.auth.FirebaseAuth
 
 class Recuperacion : AppCompatActivity() {
