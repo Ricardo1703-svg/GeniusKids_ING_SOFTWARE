@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Materias
+import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.R
 import com.example.geniuskids.databinding.ActivityAuthBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn

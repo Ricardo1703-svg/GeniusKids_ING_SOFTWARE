@@ -9,8 +9,8 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.MainActivityMatematica
-import com.example.geniuskids.Materias
+import com.example.geniuskids.Materias.MainActivityMatematica
+import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
 

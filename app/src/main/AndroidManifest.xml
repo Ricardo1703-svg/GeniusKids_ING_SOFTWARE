@@ -17,25 +17,28 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
+            android:name=".Materias.MainActivityCiencias"
+            android:exported="false" />
+        <activity
             android:name=".niveles.dificultad_lenguaje"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".niveles.Nivel"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Base_de_Datos.DetalleContenidoActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Base_de_Datos.VisualizarDatos"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Base_de_Datos.Ingresar_Datos"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Perfil"
             android:exported="false"
@@ -47,8 +50,7 @@
         <activity
             android:name=".videos.WebViewTos"
             android:exported="false"
-            android:screenOrientation="landscape"
-             />
+            android:screenOrientation="landscape" />
         <activity
             android:name=".JuegoProto"
             android:exported="false"
@@ -58,11 +60,11 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivityMatematica"
+            android:name=".Materias.MainActivityMatematica"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Materias"
+            android:name=".Materias.Materias"
             android:exported="false"
             android:label="@string/title_activity_materias"
             android:screenOrientation="portrait" />

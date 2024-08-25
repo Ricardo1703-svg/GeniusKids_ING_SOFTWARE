@@ -1,4 +1,4 @@
-package com.example.geniuskids
+package com.example.geniuskids.Materias
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,8 @@ import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.niveles.Nivel
+import com.example.geniuskids.Perfil
+import com.example.geniuskids.R
 import com.example.geniuskids.niveles.dificultad_lenguaje
 
 
@@ -20,14 +21,14 @@ class Materias : AppCompatActivity() {
 
         val MatematicaClase = findViewById<Button>(R.id.btnIrMatematicas)
         MatematicaClase.setOnClickListener {
-            val intent = Intent(this, Nivel::class.java)
+            val intent = Intent(this, MainActivityMatematica::class.java)
             intent.putExtra("MATERIA", "Dificultad Matematicas")
             startActivity(intent)
         }
 
         val CienciasClase = findViewById<Button>(R.id.btnIrCiencia)
         CienciasClase.setOnClickListener {
-            val intent = Intent(this, dificultad_lenguaje::class.java)
+            val intent = Intent(this, MainActivityCiencias::class.java)
             intent.putExtra("MATERIA", "Dificultad Ciencias")
             startActivity(intent)
         }

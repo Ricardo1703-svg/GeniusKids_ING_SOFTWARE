@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.MainActivityMatematica
+import com.example.geniuskids.Materias.MainActivityMatematica
 import com.example.geniuskids.R
 
 class WebViewTos : AppCompatActivity() {

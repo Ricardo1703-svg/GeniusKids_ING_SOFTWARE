@@ -23,6 +23,15 @@
             android:backgroundTint="#6883D3"
             android:visibility="visible"
             app:srcCompat="?attr/homeAsUpIndicator" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="65dp"
+            android:layout_height="680dp"
+            android:layout_x="65dp"
+            android:layout_y="0dp"
+            app:srcCompat="@drawable/logo" />
+
     </WebView>
 
 </LinearLayout>
