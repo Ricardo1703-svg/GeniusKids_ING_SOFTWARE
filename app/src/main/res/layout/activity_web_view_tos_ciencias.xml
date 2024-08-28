@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".videos.WebViewTos">
+    tools:context=".videos.WebViewTosCiencias">
 
     <WebView
-        android:id="@+id/webView"
+        android:id="@+id/webViewCiencias"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible">
 
         <ImageButton
-            android:id="@+id/regreif"
-            android:layout_width="80dp"
+            android:id="@+id/regreifCiencias"
+            android:layout_width="65dp"
             android:layout_height="46dp"
             android:layout_x="44dp"
             android:layout_y="36dp"
@@ -25,7 +25,7 @@
             app:srcCompat="?attr/homeAsUpIndicator" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/imageView5"
             android:layout_width="150dp"
             android:layout_height="690dp"
             android:layout_x="0dp"

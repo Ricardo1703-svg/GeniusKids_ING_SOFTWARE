@@ -17,20 +17,21 @@ class MainActivityMatematica : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_matematica)
 
+        //----------------------------Barra de Botones----------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnIrConte_uno_mate)
-        contenido1.setOnClickListener {mostrarVideo(1)}
-
         val contenido2 = findViewById<Button>(R.id.btnIrConte_dos_mate)
-        contenido2.setOnClickListener {mostrarVideo(2)}
-
         val contenido3 = findViewById<Button>(R.id.btnIrConte_tres_mate)
-        contenido3.setOnClickListener {mostrarVideo(3)}
-
         val contenido4 = findViewById<Button>(R.id.btnIrConte_cuatro_mate)
-        contenido4.setOnClickListener {mostrarVideo(4)}
-
         val contenido5 = findViewById<Button>(R.id.btnIrConte_cinco_mate)
+        //------------------------------------------------------------------------------------------
+
+        //----------------------------Seleccion de Videos-------------------------------------------
+        contenido1.setOnClickListener {mostrarVideo(1)}
+        contenido2.setOnClickListener {mostrarVideo(2)}
+        contenido3.setOnClickListener {mostrarVideo(3)}
+        contenido4.setOnClickListener {mostrarVideo(4)}
         contenido5.setOnClickListener {mostrarVideo(5)}
+        //------------------------------------------------------------------------------------------
 
         //----------------------------Barra de Navegacion-------------------------------------------
         val Home = findViewById<ImageButton>(R.id.btnHome)
@@ -50,6 +51,7 @@ class MainActivityMatematica : AppCompatActivity() {
             val intent = Intent(this, Ingresar_Datos::class.java)
             startActivity(intent)
         }
+        //------------------------------------------------------------------------------------------
     }
     private fun mostrarVideo(video: Int) {
         val intent = Intent(this, WebViewTos::class.java)
@@ -59,7 +61,7 @@ class MainActivityMatematica : AppCompatActivity() {
 
     private fun obtenerCodigoHTMLDelVideo(video: Int): String {
         return when (video) {
-            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://ricardo1703-svg.github.io/Repositorios/GeniusKids/principal/Video1.html\"" +
+            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbd36b0761e5e593bf1cfd\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
