@@ -17,20 +17,32 @@ class MainActivityMatematica : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_matematica)
 
-        //----------------------------Barra de Botones----------------------------------------------
-        val contenido1 = findViewById<Button>(R.id.btnIrConte_uno_mate)
-        val contenido2 = findViewById<Button>(R.id.btnIrConte_dos_mate)
-        val contenido3 = findViewById<Button>(R.id.btnIrConte_tres_mate)
-        val contenido4 = findViewById<Button>(R.id.btnIrConte_cuatro_mate)
-        val contenido5 = findViewById<Button>(R.id.btnIrConte_cinco_mate)
+        //----------------------------Barra de Contenidos----------------------------------------------
+        val contenido1 = findViewById<Button>(R.id.btnCon1Mate)
+        val contenido2 = findViewById<Button>(R.id.btnCon2Mate)
+        val contenido3 = findViewById<Button>(R.id.btnCon3Mate)
+        val contenido4 = findViewById<Button>(R.id.btnCon4Mate)
         //------------------------------------------------------------------------------------------
 
-        //----------------------------Seleccion de Videos-------------------------------------------
+        //----------------------------Barra de Evaluaciones---------------------------------------------
+        val btnEvaluacion1 = findViewById<Button>(R.id.btnEva1Mate)
+        val btnEvaluacion2 = findViewById<Button>(R.id.btnEva2Mate)
+        val btnEvaluacion3 = findViewById<Button>(R.id.btnEva3Mate)
+        val btnEvaluacion4 = findViewById<Button>(R.id.btnEva4Mate)
+        //------------------------------------------------------------------------------------------
+
+        //----------------------------Seleccion de Contenidos---------------------------------------
         contenido1.setOnClickListener {mostrarVideo(1)}
         contenido2.setOnClickListener {mostrarVideo(2)}
         contenido3.setOnClickListener {mostrarVideo(3)}
         contenido4.setOnClickListener {mostrarVideo(4)}
-        contenido5.setOnClickListener {mostrarVideo(5)}
+        //------------------------------------------------------------------------------------------
+
+        //----------------------------Seleccion de Evaluaciones-------------------------------------
+        btnEvaluacion1.setOnClickListener {mostrarVideo(5)}
+        btnEvaluacion2.setOnClickListener {mostrarVideo(6)}
+        btnEvaluacion3.setOnClickListener {mostrarVideo(7)}
+        btnEvaluacion4.setOnClickListener {mostrarVideo(8)}
         //------------------------------------------------------------------------------------------
 
         //----------------------------Barra de Navegacion-------------------------------------------
@@ -61,31 +73,52 @@ class MainActivityMatematica : AppCompatActivity() {
 
     private fun obtenerCodigoHTMLDelVideo(video: Int): String {
         return when (video) {
-            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbd36b0761e5e593bf1cfd\"" +
+            //----------------------------Contenidos----------------------------------------------------------
+            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66ce1cf726ffb885ed676e34\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66ca0d9b9ef57cfeeced8b60/interactive-content-juego-prueba\"" +
+            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbd36b0761e5e593bf1cfd\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66ca11b63a149c3c124381e5\"" +
+            3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbe4c032abdd7bf40bc877\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            4 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66ca66003a149c3c127b4999\" " +
+            4 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66d24a3f5d8332a6dd19cf9f\" " +
+                    "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
+                    "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
+                    "strict-origin-when-cross-origin\" allowfullscreen>" +
+                    "</iframe>"
+            //------------------------------------------------------------------------------------------------
+
+            //----------------------------Evaluaciones----------------------------------------------------------
+            5 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66d10127fc3e22ccae1e3904\" " +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            5 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66ca92963a149c3c12951f45\" " +
+            6 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66ca92963a149c3c12951f45\" " +
+                    "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
+                    "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
+                    "strict-origin-when-cross-origin\" allowfullscreen>" +
+                    "</iframe>"
+
+            7 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66cfc75a0509101bec9cd8d2\" " +
+                    "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
+                    "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
+                    "strict-origin-when-cross-origin\" allowfullscreen>" +
+                    "</iframe>"
+
+            8 ->"<iframe width=\"100%\" height=\"100%\"src=\"https://view.genially.com/66d2792da0532d20500de8d9\" " +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; " +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
