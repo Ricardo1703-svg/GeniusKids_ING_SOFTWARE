@@ -5,71 +5,82 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6BFAB"
+    android:background="@drawable/fondodificultadesw"
     tools:context=".niveles.dificultad_lenguaje">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="432dp"
+        android:layout_height="103dp"
+        android:background="#323E3E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewMateriaF"
         android:layout_width="380dp"
         android:layout_height="98dp"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#E1D0D0"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/idBasicoF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537" />
+
     <Button
         android:id="@+id/idAvanzadoF"
-        android:layout_width="168dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#E3CF9C"
+        android:layout_width="231dp"
+        android:layout_height="89dp"
+        android:backgroundTint="#03E3CF9C"
         android:padding="16dp"
-        android:text="Avanzado"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757" />
+        app:layout_constraintVertical_bias="0.826" />
 
     <Button
         android:id="@+id/idBasicoF"
-        android:layout_width="168dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#E3CF9C"
+        android:layout_width="228dp"
+        android:layout_height="94dp"
+        android:backgroundTint="#00E3CF9C"
         android:padding="16dp"
-        android:text="Basico"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.176" />
 
     <Button
         android:id="@+id/idIntermedioF"
-        android:layout_width="168dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#E3CF9C"
+        android:layout_width="215dp"
+        android:layout_height="99dp"
+        android:backgroundTint="#03E3CF9C"
         android:padding="16dp"
-        android:text="Intermedio"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.563" />
+        app:layout_constraintVertical_bias="0.513" />
 
     <LinearLayout
         android:id="@+id/navigationBar"
@@ -95,7 +106,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/cuadrado"
-            android:src="@android:drawable/btn_star"
+            android:src="@drawable/gen"
             android:text="Back" />
 
         <ImageButton

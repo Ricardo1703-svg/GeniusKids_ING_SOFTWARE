@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fmate"
+    android:background="@drawable/ver1"
     tools:context=".Materias.MainActivityMatematica">
 
 
     <ScrollView
-        android:layout_width="427dp"
-        android:layout_height="683dp"
+        android:layout_width="446dp"
+        android:layout_height="686dp"
         app:layout_constraintBottom_toTopOf="@+id/navigationBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,8 @@
                 app:layout_constraintHorizontal_bias="0.114"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.068" />
+                app:layout_constraintVertical_bias="0.068"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnEva1Mate"
@@ -49,7 +50,8 @@
                 app:layout_constraintHorizontal_bias="0.813"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.209" />
+                app:layout_constraintVertical_bias="0.209"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnCon2Mate"
@@ -64,7 +66,8 @@
                 app:layout_constraintHorizontal_bias="0.113"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.341" />
+                app:layout_constraintVertical_bias="0.341"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnEva2Mate"
@@ -79,7 +82,8 @@
                 app:layout_constraintHorizontal_bias="0.788"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.469" />
+                app:layout_constraintVertical_bias="0.469"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnCon3Mate"
@@ -94,7 +98,8 @@
                 app:layout_constraintHorizontal_bias="0.126"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.643" />
+                app:layout_constraintVertical_bias="0.643"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnEva3Mate"
@@ -109,7 +114,8 @@
                 app:layout_constraintHorizontal_bias="0.85"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.754" />
+                app:layout_constraintVertical_bias="0.754"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnCon4Mate"
@@ -124,7 +130,8 @@
                 app:layout_constraintHorizontal_bias="0.142"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btnEva3Mate"
-                app:layout_constraintVertical_bias="0.491" />
+                app:layout_constraintVertical_bias="0.491"
+                app:strokeWidth="3dp" />
 
             <Button
                 android:id="@+id/btnEva4Mate"
@@ -138,7 +145,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.858"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnCon4Mate" />
+                app:layout_constraintTop_toBottomOf="@+id/btnCon4Mate"
+                app:strokeWidth="3dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -196,7 +204,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/cuadrado"
-            android:src="@android:drawable/btn_star"
+            android:src="@drawable/gen"
             android:text="Back" />
 
         <ImageButton

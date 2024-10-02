@@ -35,15 +35,8 @@ class Materias : AppCompatActivity() {
 
         val LenguajeClase = findViewById<Button>(R.id.btnIrLenguaje)
         LenguajeClase.setOnClickListener {
-            val intent = Intent(this, dificultad_lenguaje::class.java)
+            val intent = Intent(this, MainActivityLenguaje::class.java)
             intent.putExtra("MATERIA", "Dificultad Lenguaje")
-            startActivity(intent)
-        }
-
-        val InglesClase = findViewById<Button>(R.id.btningles)
-        InglesClase.setOnClickListener {
-            val intent = Intent(this, dificultad_lenguaje::class.java)
-            intent.putExtra("MATERIA", "Dificultad Ingles")
             startActivity(intent)
         }
 
@@ -54,7 +47,7 @@ class Materias : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //Barra de Nvegacion
+        //-------------------Barra de Nvegacion------------------------------------------
         val Home = findViewById<ImageButton>(R.id.btnHome)
         Home.setOnClickListener {
             val intent = Intent(this, Materias::class.java)
@@ -72,5 +65,7 @@ class Materias : AppCompatActivity() {
             val intent = Intent(this, Ingresar_Datos::class.java)
             startActivity(intent)
         }
+        //-------------------------------------------------------------------------------
+
     }
 }

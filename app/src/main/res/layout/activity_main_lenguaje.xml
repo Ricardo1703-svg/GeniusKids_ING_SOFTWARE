@@ -5,28 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondociencias"
-    tools:context=".Materias.MainActivityCiencias">
+    android:background="@drawable/fondolenguaje"
+    tools:context=".Materias.MainActivityLenguaje">
 
     <ScrollView
-        android:layout_width="430dp"
-        android:layout_height="682dp"
+        android:layout_width="444dp"
+        android:layout_height="718dp"
         app:layout_constraintBottom_toTopOf="@+id/navigationBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4">
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btnCon1Cien"
+                android:id="@+id/btnCon1Lenguaje"
                 android:layout_width="166dp"
                 android:layout_height="70dp"
-                android:backgroundTint="#1242BA"
+                android:backgroundTint="#f98110"
                 android:text="Contenido 1"
-                android:textColor="#E8D7D7"
+                android:textColor="#120D0D"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -37,10 +39,10 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnEva1Cien"
+                android:id="@+id/btnEva1Lenguaje"
                 android:layout_width="175dp"
                 android:layout_height="61dp"
-                android:backgroundTint="#49CDB3"
+                android:backgroundTint="#FFCA91"
                 android:text="Evaluacion 1"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -53,12 +55,12 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnCon2Cien"
+                android:id="@+id/btnCon2Lenguaje"
                 android:layout_width="162dp"
                 android:layout_height="61dp"
-                android:backgroundTint="#1242BA"
+                android:backgroundTint="#f98110"
                 android:text="Contenido 2"
-                android:textColor="#E8D7D7"
+                android:textColor="#120D0D"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -69,10 +71,10 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnEva2Cien"
+                android:id="@+id/btnEva2Lenguaje"
                 android:layout_width="179dp"
                 android:layout_height="65dp"
-                android:backgroundTint="#49CDB3"
+                android:backgroundTint="#FFCA91"
                 android:text="Evaluacion 2"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -85,12 +87,12 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnCon3Cien"
+                android:id="@+id/btnCon3Lenguaje"
                 android:layout_width="165dp"
                 android:layout_height="74dp"
-                android:backgroundTint="#1242BA"
+                android:backgroundTint="#f98110"
                 android:text="Contenido 3"
-                android:textColor="#E8D7D7"
+                android:textColor="#120D0D"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -101,10 +103,10 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnEva3Cien"
+                android:id="@+id/btnEva3Lenguaje"
                 android:layout_width="193dp"
                 android:layout_height="77dp"
-                android:backgroundTint="#49CDB3"
+                android:backgroundTint="#FFCA91"
                 android:text="Evaluacion 3"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -117,26 +119,26 @@
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnCon4Cien"
+                android:id="@+id/btnCon4Lenguaje"
                 android:layout_width="187dp"
                 android:layout_height="54dp"
-                android:backgroundTint="#1242BA"
+                android:backgroundTint="#f98110"
                 android:text="Contenido 4"
-                android:textColor="#E8D7D7"
+                android:textColor="#120D0D"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.142"
+                app:layout_constraintHorizontal_bias="0.135"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnEva3Cien"
+                app:layout_constraintTop_toBottomOf="@+id/btnEva3Lenguaje"
                 app:layout_constraintVertical_bias="0.491"
                 app:strokeWidth="3dp" />
 
             <Button
-                android:id="@+id/btnEva4Cien"
+                android:id="@+id/btnEva4Lenguaje"
                 android:layout_width="180dp"
                 android:layout_height="58dp"
-                android:backgroundTint="#49CDB3"
+                android:backgroundTint="#FFCA91"
                 android:text="Evaluacion 4"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -144,7 +146,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.858"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnCon4Cien"
+                app:layout_constraintTop_toBottomOf="@+id/btnCon4Lenguaje"
                 app:strokeWidth="3dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -166,7 +168,7 @@
         android:id="@+id/textView2"
         android:layout_width="340dp"
         android:layout_height="52dp"
-        android:text="Bienvenidos a Ciencias"
+        android:text="Bienvenidos a Lenguaje"
         android:textAlignment="center"
         android:textColor="#FBFBFB"
         android:textSize="24sp"
@@ -178,11 +180,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025" />
 
-
     <LinearLayout
         android:id="@+id/navigationBar"
-        android:layout_width="0dp"
-        android:layout_height="103dp"
+        android:layout_width="438dp"
+        android:layout_height="75dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

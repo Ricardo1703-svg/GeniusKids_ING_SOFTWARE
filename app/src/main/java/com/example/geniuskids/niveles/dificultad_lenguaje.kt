@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
+import com.example.geniuskids.Materias.MainActivityLenguaje
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
@@ -28,7 +29,8 @@ class dificultad_lenguaje : AppCompatActivity() {
         val Avanzado = findViewById<Button>(R.id.idAvanzadoF)
 
         Basico.setOnClickListener {
-            Toast.makeText(this, "Basico PROXIMAMENTE", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivityLenguaje::class.java)
+            startActivity(intent)
         }
 
         Intermedio.setOnClickListener {

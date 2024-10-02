@@ -4,8 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDA8A8"
+    android:background="@drawable/ovalo"
     tools:context=".Menu">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="439dp"
+        android:layout_height="99dp"
+        android:background="#323E3E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cursos"
+        android:textColor="#EFEBEB"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.522" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuMatematicas"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/matematicasmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuLenguaje"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/lenguajemenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuCiencias"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cienciasmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291"
+        app:shapeAppearanceOverlay="@style/radius" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuSociales"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/socialesmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="3dp" />
 
     <LinearLayout
         android:id="@+id/navigationBar"
@@ -31,7 +114,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/cuadrado"
-            android:src="@android:drawable/btn_star"
+            android:src="@drawable/gen"
             android:text="Back" />
 
         <ImageButton
@@ -44,4 +127,5 @@
             android:text="Menu" />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,13 +17,20 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
-            android:name=".videos.WebViewTosCiencias"
+            android:name=".videos.WebViewTosLengua"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
+            android:name=".Materias.MainActivityLenguaje"
+            android:exported="false" />
+        <activity
+            android:name=".videos.WebViewTosCiencias"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".Materias.MainActivityCiencias"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".niveles.dificultad_lenguaje"
             android:exported="false"
