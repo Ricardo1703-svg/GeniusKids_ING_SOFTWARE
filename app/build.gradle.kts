@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("org.sonarqube") version "4.3.0.3225"
+    id("jacoco")
 }
 
 android {
@@ -39,6 +41,44 @@ android {
     }
 }
 
+jacoco {
+    toolVersion = "0.8.7"  // Verifica si hay versiones más recientes
+}
+
+tasks.withType<Test> {
+    extensions.configure(JacocoTaskExtension::class) {
+        isIncludeNoLocationClasses = true
+        excludes = listOf("jdk.internal.*")
+    }
+}
+
+tasks.register<JacocoReport>("jacocoTestReport") {
+    dependsOn(tasks.named("testDebugUnitTest"))
+
+    reports {
+        xml.required.set(true)  // Habilita reporte XML
+        html.required.set(true)  // Opcional: habilita reporte HTML
+    }
+
+    classDirectories.setFrom(
+        fileTree(
+            mapOf(
+                "dir" to "${project.buildDir}/intermediates/javac/debug",
+                "excludes" to listOf(
+                    "**/R.class",
+                    "**/R$*.class",
+                    "**/BuildConfig.*",
+                    "**/Manifest*.*",
+                    "**/*Test*.*"
+                )
+            )
+        )
+    )
+
+    sourceDirectories.setFrom(files("src/main/java", "src/main/kotlin"))
+    executionData.setFrom(fileTree(mapOf("dir" to project.buildDir, "includes" to listOf("**/jacoco/*.exec"))))
+}
+
 dependencies {
 
     //-----------------Base de Firebase---------------------------------
@@ -48,11 +88,6 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation("com.google.firebase:firebase-auth:21.0.1")
     //-------------
-
-
-
-    // ---------------------
-
     implementation("androidx.webkit:webkit:1.8.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -71,4 +106,8 @@ dependencies {
     //Mongo
     implementation ("io.realm:realm-android-library:10.10.0")
     implementation ("org.mongodb:mongodb-driver-sync:4.3.0")
+
+    //---------------------------------------------------------------------------------
+    implementation("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1")
+    //---------------------------------------------------------------------------------
 }
