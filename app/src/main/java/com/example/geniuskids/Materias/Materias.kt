@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
+import com.example.geniuskids.niveles.dificultad_ciencias
 import com.example.geniuskids.niveles.dificultad_lenguaje
+import com.example.geniuskids.niveles.dificultad_matematicas
 
 
 class Materias : AppCompatActivity() {
@@ -21,29 +23,25 @@ class Materias : AppCompatActivity() {
 
         val MatematicaClase = findViewById<Button>(R.id.btnIrMatematicas)
         MatematicaClase.setOnClickListener {
-            val intent = Intent(this, MainActivityMatematica::class.java)
-            intent.putExtra("MATERIA", "Dificultad Matematicas")
+            val intent = Intent(this, dificultad_matematicas::class.java)
             startActivity(intent)
         }
 
         val CienciasClase = findViewById<Button>(R.id.btnIrCiencia)
         CienciasClase.setOnClickListener {
-            val intent = Intent(this, MainActivityCiencias::class.java)
-            intent.putExtra("MATERIA", "Dificultad Ciencias")
+            val intent = Intent(this, dificultad_ciencias::class.java)
             startActivity(intent)
         }
 
         val LenguajeClase = findViewById<Button>(R.id.btnIrLenguaje)
         LenguajeClase.setOnClickListener {
-            val intent = Intent(this, MainActivityLenguaje::class.java)
-            intent.putExtra("MATERIA", "Dificultad Lenguaje")
+            val intent = Intent(this, dificultad_lenguaje::class.java)
             startActivity(intent)
         }
 
         val SocialesClase = findViewById<Button>(R.id.btnIrSociales)
         SocialesClase.setOnClickListener {
             val intent = Intent(this, dificultad_lenguaje::class.java)
-            intent.putExtra("MATERIA", "Dificultad Sociales")
             startActivity(intent)
         }
 

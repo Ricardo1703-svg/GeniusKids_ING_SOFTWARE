@@ -5,15 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/facilmate"
-    tools:context=".Materias.MainActivityMatematica">
-
+    android:background="@drawable/intermater"
+    tools:context=".Intermedio.MainActivityInterMatematicas">
 
     <Button
         android:id="@+id/btnEva1Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="260dp"
         android:backgroundTint="#F38D8D"
         android:text="Evaluacion 1"
         android:textColor="#000000"
@@ -28,7 +27,7 @@
         android:id="@+id/btnCon2Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="#3C2929"
         android:text="Contenido 2"
         android:textColor="#E8D7D7"
@@ -40,10 +39,25 @@
         app:strokeWidth="3dp" />
 
     <Button
+        android:id="@+id/btnCon3Mate"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#3C2929"
+        android:text="Contenido 3"
+        android:textColor="#E8D7D7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon2Mate"
+        app:strokeWidth="3dp" />
+
+    <Button
         android:id="@+id/btnEva3Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="#F38D8D"
         android:text="Evaluacion 3"
         android:textColor="#000000"
@@ -58,7 +72,7 @@
         android:id="@+id/btnCon1Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="196dp"
         android:backgroundTint="#2E2B26"
         android:text="Contenido 1"
         android:textColor="#E8D7D7"
@@ -70,55 +84,10 @@
         app:strokeWidth="3dp" />
 
     <Button
-        android:id="@+id/btnCon4Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="88dp"
-        android:backgroundTint="#3C2929"
-        android:text="Contenido 4"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon3Mate"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnCon3Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="84dp"
-        android:backgroundTint="#3C2929"
-        android:text="Contenido 3"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon2Mate"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva4Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="76dp"
-        android:backgroundTint="#F38D8D"
-        android:text="Evaluacion 4"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva3Mate"
-        app:strokeWidth="3dp" />
-
-    <Button
         android:id="@+id/btnEva2Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="92dp"
         android:backgroundTint="#F38D8D"
         android:text="Evaluacion 2"
         android:textColor="#000000"
@@ -138,34 +107,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/diseno_botones"
-            android:text="Home" />
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cuadrado"
+        android:src="@drawable/diseno_botones"
+        android:text="Home" />
 
-        <ImageButton
-            android:id="@+id/btnMaterias"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/gen"
-            android:text="Back" />
+    <ImageButton
+        android:id="@+id/btnMaterias"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cuadrado"
+        android:src="@drawable/gen"
+        android:text="Back" />
 
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/fui_ic_anonymous_white_24dp"
-            android:text="Menu" />
+    <ImageButton
+        android:id="@+id/btnPerfil"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cuadrado"
+        android:src="@drawable/fui_ic_anonymous_white_24dp"
+        android:text="Menu" />
 
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

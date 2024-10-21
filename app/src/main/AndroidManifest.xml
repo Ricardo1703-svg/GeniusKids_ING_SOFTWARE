@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApp"
@@ -17,12 +18,36 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
+            android:name=".videos.WebViewTosCienciasIntermedio"
+            android:exported="false" />
+        <activity
+            android:name=".Intermedio.MainActivityInterCiencias"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".niveles.dificultad_ciencias"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".niveles.dificultad_matematicas"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videos.WebViewTosMateIntermedio"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Intermedio.MainActivityInterMatematicas"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".videos.WebViewTosLengua"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Materias.MainActivityLenguaje"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".videos.WebViewTosCiencias"
             android:exported="false"

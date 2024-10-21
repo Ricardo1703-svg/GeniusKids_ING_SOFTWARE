@@ -1,148 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ovalo"
+    android:background="@drawable/fondoperfiln"
     tools:context=".Perfil">
 
-    <RelativeLayout
-        android:id="@+id/profile_header"
-        android:layout_width="match_parent"
-        android:layout_height="233dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="2dp">
 
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/logo" />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="196dp"
+        android:layout_height="190dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/nombre_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
-        <TextView
-            android:id="@+id/nombre_perfil"
-            android:layout_width="301dp"
-            android:layout_height="34dp"
-            android:layout_below="@+id/profile_image"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="54dp"
-            android:layout_marginBottom="49dp"
-            android:text="Estado de la cuenta de Google: No conectado"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/nombre_perfil"
+        android:layout_width="309dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="58dp"
+        android:text="Sin Cuenta Asociada"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="512dp"
+        android:backgroundTint="#194aa7"
+        android:text="Cerrar Sesion"
+        android:textColor="#E8D7D7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="3dp" />
 
     <LinearLayout
-        android:id="@+id/profile_settings_section"
-        android:layout_width="match_parent"
-        android:layout_height="293dp"
-        android:layout_below="@id/profile_header"
-        android:layout_marginTop="13dp"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:id="@+id/navigationBar"
+        android:layout_width="431dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GENERAL"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/diseno_botones"
+            android:text="Home" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnMaterias"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/gen"
+            android:text="Back" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/homa" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Profile Settings"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold|italic" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/usuario" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Privacy"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold|italic" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ciencias" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Notifications"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold|italic" />
-
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/fui_ic_anonymous_white_24dp"
+            android:text="Menu" />
 
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/btnCerrarSesion"
-        android:layout_width="376dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/border_background"
-        app:srcCompat="@android:drawable/ic_lock_power_off" />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

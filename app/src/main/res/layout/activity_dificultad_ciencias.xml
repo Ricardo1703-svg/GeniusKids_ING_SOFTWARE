@@ -5,59 +5,60 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondodificultadesw"
-    tools:context=".niveles.dificultad_lenguaje">
+    android:background="@drawable/fondodificultadciencias"
+    tools:context=".niveles.dificultad_ciencias">
+
 
     <Button
         android:id="@+id/idAvanzadoF"
-        android:layout_width="227dp"
-        android:layout_height="102dp"
-        android:backgroundTint="#03E3CF9C"
+        android:layout_width="209dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#00E3CF9C"
         android:padding="16dp"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829"
+        app:layout_constraintVertical_bias="0.813"
         app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/idBasicoF"
-        android:layout_width="228dp"
-        android:layout_height="94dp"
+        android:layout_width="209dp"
+        android:layout_height="82dp"
         android:backgroundTint="#00E3CF9C"
         android:padding="16dp"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181"
+        app:layout_constraintVertical_bias="0.19"
         app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/idIntermedioF"
-        android:layout_width="215dp"
-        android:layout_height="99dp"
-        android:backgroundTint="#03E3CF9C"
+        android:layout_width="209dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#00E3CF9C"
         android:padding="16dp"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513"
-        app:strokeWidth="3dp"/>
+        app:layout_constraintVertical_bias="0.511"
+        app:strokeWidth="3dp" />
 
     <LinearLayout
         android:id="@+id/navigationBar"
@@ -94,6 +95,5 @@
             android:background="@drawable/cuadrado"
             android:src="@drawable/fui_ic_anonymous_white_24dp"
             android:text="Menu" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

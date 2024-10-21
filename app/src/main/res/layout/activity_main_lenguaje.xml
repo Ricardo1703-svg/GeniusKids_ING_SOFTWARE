@@ -5,180 +5,128 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondolenguaje"
+    android:background="@drawable/facillengua"
     tools:context=".Materias.MainActivityLenguaje">
 
-    <ScrollView
-        android:layout_width="444dp"
-        android:layout_height="718dp"
-        app:layout_constraintBottom_toTopOf="@+id/navigationBar"
+    <Button
+        android:id="@+id/btnCon1Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="152dp"
+        android:backgroundTint="#f98011"
+        android:text="Contenido 1"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/btnCon1Lenguaje"
-                android:layout_width="166dp"
-                android:layout_height="70dp"
-                android:backgroundTint="#f98110"
-                android:text="Contenido 1"
-                android:textColor="#120D0D"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.114"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.068"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnEva1Lenguaje"
-                android:layout_width="175dp"
-                android:layout_height="61dp"
-                android:backgroundTint="#FFCA91"
-                android:text="Evaluacion 1"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.813"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.209"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnCon2Lenguaje"
-                android:layout_width="162dp"
-                android:layout_height="61dp"
-                android:backgroundTint="#f98110"
-                android:text="Contenido 2"
-                android:textColor="#120D0D"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.113"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.341"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnEva2Lenguaje"
-                android:layout_width="179dp"
-                android:layout_height="65dp"
-                android:backgroundTint="#FFCA91"
-                android:text="Evaluacion 2"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.788"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.469"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnCon3Lenguaje"
-                android:layout_width="165dp"
-                android:layout_height="74dp"
-                android:backgroundTint="#f98110"
-                android:text="Contenido 3"
-                android:textColor="#120D0D"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.126"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.643"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnEva3Lenguaje"
-                android:layout_width="193dp"
-                android:layout_height="77dp"
-                android:backgroundTint="#FFCA91"
-                android:text="Evaluacion 3"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.85"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.754"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnCon4Lenguaje"
-                android:layout_width="187dp"
-                android:layout_height="54dp"
-                android:backgroundTint="#f98110"
-                android:text="Contenido 4"
-                android:textColor="#120D0D"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.135"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnEva3Lenguaje"
-                app:layout_constraintVertical_bias="0.491"
-                app:strokeWidth="3dp" />
-
-            <Button
-                android:id="@+id/btnEva4Lenguaje"
-                android:layout_width="180dp"
-                android:layout_height="58dp"
-                android:backgroundTint="#FFCA91"
-                android:text="Evaluacion 4"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.858"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnCon4Lenguaje"
-                app:strokeWidth="3dp" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="76dp"
-        android:background="#323E3E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:strokeWidth="3dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="340dp"
-        android:layout_height="52dp"
-        android:text="Bienvenidos a Lenguaje"
-        android:textAlignment="center"
-        android:textColor="#FBFBFB"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/btnEva1Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="216dp"
+        android:backgroundTint="#ffcb90"
+        android:text="Evaluacion 1"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnCon2Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="#f98011"
+        android:text="Contenido 2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon1Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva2Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#ffcb90"
+        android:text="Evaluacion 2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva1Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnCon3Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#f98011"
+        android:text="Contenido 3"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon2Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva3Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#ffcb90"
+        android:text="Evaluacion 3"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva2Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnCon4Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#f98011"
+        android:text="Contenido 4"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon3Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva4Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#ffcb90"
+        android:text="Evaluacion 4"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva3Lenguaje"
+        app:strokeWidth="3dp" />
 
     <LinearLayout
         android:id="@+id/navigationBar"

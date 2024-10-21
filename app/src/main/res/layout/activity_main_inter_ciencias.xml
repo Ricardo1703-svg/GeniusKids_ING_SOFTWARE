@@ -6,8 +6,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondociencias"
-    tools:context=".Materias.MainActivityCiencias">
+    android:background="@drawable/interciencia"
+    tools:context=".Intermedio.MainActivityInterCiencias">
+
+    <LinearLayout
+        android:id="@+id/navigationBar"
+        android:layout_width="440dp"
+        android:layout_height="104dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/diseno_botones"
+            android:text="Home" />
+
+        <ImageButton
+            android:id="@+id/btnMaterias"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/gen"
+            android:text="Back" />
+
+        <ImageButton
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cuadrado"
+            android:src="@drawable/fui_ic_anonymous_white_24dp"
+            android:text="Menu" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnCon1Cien"
@@ -129,58 +167,5 @@
         app:layout_constraintTop_toBottomOf="@+id/btnEva3Cien"
         app:strokeWidth="3dp" />
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="340dp"
-        android:layout_height="52dp"
-        android:text="Nivel Facil"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
-
-    <LinearLayout
-        android:id="@+id/navigationBar"
-        android:layout_width="0dp"
-        android:layout_height="103dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/diseno_botones"
-            android:text="Home" />
-
-        <ImageButton
-            android:id="@+id/btnMaterias"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/gen"
-            android:text="Back" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/fui_ic_anonymous_white_24dp"
-            android:text="Menu" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

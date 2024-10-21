@@ -26,13 +26,15 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/cienciasmenu"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.801"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.291"
-        app:shapeAppearanceOverlay="@style/radius" />
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/menuLenguaje"
@@ -58,7 +60,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.627"
-        app:shapeAppearanceOverlay="@style/radius" />
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
     <Button
         android:id="@+id/btnIrSociales"
@@ -73,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.291"
-        app:strokeWidth="3dp"
+        app:strokeWidth="5dp"
         app:shapeAppearanceOverlay="@style/radius"/>
 
     <Button
@@ -81,48 +84,42 @@
         android:layout_width="150dp"
         android:layout_height="163dp"
         android:backgroundTint="#00D83D3D"
-        app:shapeAppearanceOverlay="@style/radius"
-        app:strokeWidth="3dp"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="443dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.801"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627"/>
+        app:layout_constraintVertical_bias="0.627"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
     <Button
         android:id="@+id/btnIrLenguaje"
         android:layout_width="151dp"
         android:layout_height="158dp"
         android:backgroundTint="#00FFFFFF"
-        app:strokeWidth="3dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="443dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.627"
-        app:shapeAppearanceOverlay="@style/radius"/>
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
     <Button
         android:id="@+id/btnIrCiencia"
         android:layout_width="150dp"
         android:layout_height="158dp"
         android:backgroundTint="#00C51818"
-        app:shapeAppearanceOverlay="@style/radius"
-        app:strokeWidth="3dp"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="203dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.801"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291"/>
+        app:layout_constraintVertical_bias="0.291"
+        app:strokeWidth="5dp"
+        app:shapeAppearanceOverlay="@style/radius"/>
 
     <View
         android:id="@+id/view4"

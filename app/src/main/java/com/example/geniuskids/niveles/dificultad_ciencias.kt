@@ -4,36 +4,34 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.Materias.MainActivityLenguaje
+import com.example.geniuskids.Intermedio.MainActivityInterCiencias
+import com.example.geniuskids.Materias.MainActivityCiencias
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
 
-class dificultad_lenguaje : AppCompatActivity() {
+class dificultad_ciencias : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_dificultad_lenguaje)
+        setContentView(R.layout.activity_dificultad_ciencias)
+
 
         val Basico = findViewById<Button>(R.id.idBasicoF)
         val Intermedio = findViewById<Button>(R.id.idIntermedioF)
         val Avanzado = findViewById<Button>(R.id.idAvanzadoF)
 
         Basico.setOnClickListener {
-            val intent = Intent(this, MainActivityLenguaje::class.java)
+            val intent = Intent(this, MainActivityCiencias::class.java)
             startActivity(intent)
         }
 
         Intermedio.setOnClickListener {
-            Toast.makeText(this, "Intermedio PROXIMAMENTE", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivityInterCiencias::class.java)
+            startActivity(intent)
         }
-        Avanzado.setOnClickListener {
-            Toast.makeText(this, "Avanzado PROXIMAMENTE", Toast.LENGTH_SHORT).show()
-        }
+
 
         //-----------------------------Barra de Navegacion------------------------------------------
         val Home = findViewById<ImageButton>(R.id.btnHome)

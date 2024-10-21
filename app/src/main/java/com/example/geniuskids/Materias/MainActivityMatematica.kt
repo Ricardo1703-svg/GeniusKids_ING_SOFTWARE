@@ -17,14 +17,14 @@ class MainActivityMatematica : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_matematica)
 
-        //----------------------------Barra de Contenidos----------------------------------------------
+        //----------------------------Barra de Contenidos-------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnCon1Mate)
         val contenido2 = findViewById<Button>(R.id.btnCon2Mate)
         val contenido3 = findViewById<Button>(R.id.btnCon3Mate)
         val contenido4 = findViewById<Button>(R.id.btnCon4Mate)
         //------------------------------------------------------------------------------------------
 
-        //----------------------------Barra de Evaluaciones---------------------------------------------
+        //----------------------------Barra de Evaluaciones-----------------------------------------
         val btnEvaluacion1 = findViewById<Button>(R.id.btnEva1Mate)
         val btnEvaluacion2 = findViewById<Button>(R.id.btnEva2Mate)
         val btnEvaluacion3 = findViewById<Button>(R.id.btnEva3Mate)

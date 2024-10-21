@@ -4,7 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.R
@@ -18,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class AuthActivity : AppCompatActivity() {
     private val GOOGLE_SIGN_IN = 100
@@ -29,6 +34,8 @@ class AuthActivity : AppCompatActivity() {
     private val PREFS_FILE = "myPrefs"
     private lateinit var binding: ActivityAuthBinding
 
+    private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
@@ -36,6 +43,7 @@ class AuthActivity : AppCompatActivity() {
 
         setUpActions()
         initializeDataIfNeeded()
+
 
         val sharedPreferences = getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE)
         val googleSignIn = sharedPreferences.getBoolean("googleSignIn", false)
@@ -52,6 +60,9 @@ class AuthActivity : AppCompatActivity() {
                 togglePasswordVisibility()
             }
 
+            auth = FirebaseAuth.getInstance()
+            firestore = FirebaseFirestore.getInstance()
+
             val analytics = FirebaseAnalytics.getInstance(this)
             val bundle = Bundle()
             bundle.putString("message", "Integracion de Firebase Completa")
@@ -61,6 +72,7 @@ class AuthActivity : AppCompatActivity() {
             contra = findViewById(R.id.txtContrasena)
             val ingresar = findViewById<Button>(R.id.btnIngresar)
             ingresar.setOnClickListener {
+
                 val email = correo.text.toString()
                 val password = contra.text.toString()
 
@@ -84,6 +96,7 @@ class AuthActivity : AppCompatActivity() {
                         }
                 } else {
                     Toast.makeText(this, "Por favor, ingrese correo y contraseña", Toast.LENGTH_SHORT).show()
+                    loginUser(email, password)
                 }
             }
 
@@ -231,5 +244,38 @@ class AuthActivity : AppCompatActivity() {
             editor.putBoolean("initialized", true)
             editor.apply()
         }
+    }
+
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val userId = auth.currentUser?.uid
+                    // Obtener el nombre de usuario desde Firestore
+                    firestore.collection("users").document(userId!!)
+                        .get()
+                        .addOnSuccessListener { document ->
+                            if (document != null && document.exists()) {
+                                val username = document.getString("username")
+
+                                // Guardar el nombre de usuario en SharedPreferences
+                                val sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+                                val editor = sharedPreferences.edit()
+                                editor.putString("username", username)
+                                editor.apply()
+
+                                // Redirigir al Activity de materias
+                                val intent = Intent(this, Materias::class.java)
+                                startActivity(intent)
+                                finish()
+                            }
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this, "Error al obtener el nombre de usuario", Toast.LENGTH_SHORT).show()
+                        }
+                } else {
+                    Toast.makeText(this, "Error al iniciar sesión: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

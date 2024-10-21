@@ -1,4 +1,4 @@
-package com.example.geniuskids.Materias
+package com.example.geniuskids.Intermedio
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,14 +6,15 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
+import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
 import com.example.geniuskids.videos.WebViewTosCiencias
 
-class MainActivityCiencias : AppCompatActivity() {
+class MainActivityInterCiencias : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_ciencias)
+        setContentView(R.layout.activity_main_inter_ciencias)
 
         //----------------------------Barra de Contenidos-------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnCon1Cien)
@@ -29,7 +30,6 @@ class MainActivityCiencias : AppCompatActivity() {
         val evaluacion4 = findViewById<Button>(R.id.btnEva4Cien)
         //------------------------------------------------------------------------------------------
 
-
         //----------------------------Seleccion de Contenidos---------------------------------------
         contenido1.setOnClickListener {mostrarVideo(1)}
         contenido2.setOnClickListener {mostrarVideo(2)}
@@ -43,7 +43,6 @@ class MainActivityCiencias : AppCompatActivity() {
         evaluacion3.setOnClickListener {mostrarVideo(7)}
         evaluacion4.setOnClickListener {mostrarVideo(8)}
         //------------------------------------------------------------------------------------------
-
 
         //----------------------------Barra de Navegacion-------------------------------------------
         val Home = findViewById<ImageButton>(R.id.btnHome)
@@ -64,8 +63,6 @@ class MainActivityCiencias : AppCompatActivity() {
             startActivity(intent)
         }
         //------------------------------------------------------------------------------------------
-
-
     }
 
     private fun mostrarVideo(video: Int) {
@@ -76,25 +73,25 @@ class MainActivityCiencias : AppCompatActivity() {
     private fun obtenerCodigoHTMLDelVideo(video: Int): String {
         return when (video) {
             //----------------------------Contenidos----------------------------------------------------------
-            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cb94d60761e5e5939297b5\"" +
+            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/670c70077462b0d102ec3b51\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbbb900761e5e593ae1531\"" +
+            2 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/670c88b5f84157b026b0edac\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cd3360b27c9cd69bff189d\"" +
+            3 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/670c77213bed1298708f4151\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            4 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66ccc1ed399ccc894e1fdf0b\"" +
+            4 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/6711d456d8031d1fcba7c740\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
@@ -102,25 +99,25 @@ class MainActivityCiencias : AppCompatActivity() {
             //--------------------------------------------------------------------------------------------------
 
             //----------------------------Evaluaciones----------------------------------------------------------
-            5 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cb96300761e5e59393ee3d\"" +
+            5 -> "<iframe width=\"100%\" height=\"100%\" src=\"------------------------\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            6 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbfafeae7f489d7afc540e\"" +
+            6 -> "<iframe width=\"100%\" height=\"100%\" src=\"------------------------\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            7 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cbef3c9ef57cfeec0e1e2f\"" +
+            7 -> "<iframe width=\"100%\" height=\"100%\" src=\"------------------------\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +
                     "</iframe>"
 
-            8 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://view.genially.com/66cfa6624c272cefd0218905\"" +
+            8 -> "<iframe width=\"100%\" height=\"100%\" src=\"------------------------\"" +
                     "title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write;" +
                     "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
                     "strict-origin-when-cross-origin\" allowfullscreen>" +

@@ -87,6 +87,7 @@ dependencies {
     implementation("com.firebaseui:firebase-ui-auth:7.2.0")
     implementation("com.google.android.gms:play-services-auth:21.0.0")
     implementation("com.google.firebase:firebase-auth:21.0.1")
+    implementation ("com.google.firebase:firebase-firestore:24.6.0")
     //-------------
     implementation("androidx.webkit:webkit:1.8.0")
     implementation("androidx.core:core-ktx:1.12.0")
@@ -99,9 +100,13 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     implementation("androidx.activity:activity:1.8.0")
     implementation("com.google.firebase:firebase-database-ktx:21.0.0")
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
+    implementation("com.google.firebase:firebase-storage-ktx:21.0.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation ("androidx.gridlayout:gridlayout:1.0.0")
 
     //Mongo
     implementation ("io.realm:realm-android-library:10.10.0")
@@ -110,4 +115,8 @@ dependencies {
     //---------------------------------------------------------------------------------
     implementation("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1")
     //---------------------------------------------------------------------------------
+
+    //----------------------------Perfil de Google--------------------------------------------------
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+
 }
