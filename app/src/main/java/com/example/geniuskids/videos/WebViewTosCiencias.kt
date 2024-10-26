@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Intermedio.MainActivityInterCiencias
+import com.example.geniuskids.Materias.MainActivityCiencias
 import com.example.geniuskids.R
 
 class WebViewTosCiencias : AppCompatActivity() {
@@ -22,7 +22,7 @@ class WebViewTosCiencias : AppCompatActivity() {
 
         val regreifCiencias = findViewById<ImageButton>(R.id.regreifCiencias)
         regreifCiencias.setOnClickListener {
-            val intent = Intent(this, MainActivityInterCiencias::class.java)
+            val intent = Intent(this, MainActivityCiencias::class.java)
             startActivity(intent)
         }
     }
