@@ -2,16 +2,14 @@ package com.example.geniuskids.niveles
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
+import com.airbnb.lottie.LottieAnimationView
 import com.example.geniuskids.Materias.MainActivityLenguaje
 import com.example.geniuskids.Materias.Materias
-import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class dificultad_lenguaje : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,39 +17,46 @@ class dificultad_lenguaje : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dificultad_lenguaje)
 
-        val Basico = findViewById<Button>(R.id.idBasicoF)
-        val Intermedio = findViewById<Button>(R.id.idIntermedioF)
-        val Avanzado = findViewById<Button>(R.id.idAvanzadoF)
+        val lottieAnimationView = findViewById<LottieAnimationView>(R.id.lottieAnimationView)
+        lottieAnimationView.setAnimation(R.raw.lenguaje)
+        lottieAnimationView.playAnimation()
 
-        Basico.setOnClickListener {
-            val intent = Intent(this, MainActivityLenguaje::class.java)
+        val btnregresar = findViewById<ImageButton>(R.id.btnregresar11)
+        btnregresar.setOnClickListener {
+            intent = Intent(this, Materias::class.java)
             startActivity(intent)
         }
 
-        Intermedio.setOnClickListener {
-            Toast.makeText(this, "Intermedio PROXIMAMENTE", Toast.LENGTH_SHORT).show()
-        }
-        Avanzado.setOnClickListener {
-            Toast.makeText(this, "Avanzado PROXIMAMENTE", Toast.LENGTH_SHORT).show()
-        }
+        Barra()
+    }
 
-        //-----------------------------Barra de Navegacion------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
+    fun Barra(){
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
+        // Establecer el ítem seleccionado en "Home"
+        bottomNav.selectedItemId = R.id.nav_facil_lenguaje
 
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_facil_lenguaje -> {
+                    startActivity(Intent(this, MainActivityLenguaje::class.java))
+                    true
+                }
+                R.id.nav_intermedio_lenguaje -> {
+
+                    //startActivity(Intent(this, MainActivityInterLenguaje::class.java))
+                    true
+                }
+                /**
+                R.id.nav_avanzado_ciencias -> {
+                startActivity(Intent(this, Niveles::class.java))
+                true
+                }
+                 **/
+                else -> false
+            }
         }
+    }
+    override fun onBackPressed() {
     }
 }

@@ -6,9 +6,9 @@ import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
+import com.example.geniuskids.niveles.dificultad_ciencias
+import com.example.geniuskids.niveles.dificultad_matematicas
 import com.example.geniuskids.videos.WebViewTos
 
 class MainActivityMatematica : AppCompatActivity() {
@@ -16,6 +16,12 @@ class MainActivityMatematica : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_matematica)
+
+        val btnregresar = findViewById<ImageButton>(R.id.btnregresar6)
+        btnregresar.setOnClickListener {
+            intent = Intent(this, dificultad_matematicas::class.java)
+            startActivity(intent)
+        }
 
         //----------------------------Barra de Contenidos-------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnCon1Mate)
@@ -44,33 +50,12 @@ class MainActivityMatematica : AppCompatActivity() {
         btnEvaluacion3.setOnClickListener {mostrarVideo(7)}
         btnEvaluacion4.setOnClickListener {mostrarVideo(8)}
         //------------------------------------------------------------------------------------------
-
-        //----------------------------Barra de Navegacion-------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
-
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
-
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
-        }
-        //------------------------------------------------------------------------------------------
     }
     private fun mostrarVideo(video: Int) {
         val intent = Intent(this, WebViewTos::class.java)
         intent.putExtra("VIDEO_HTML", obtenerCodigoHTMLDelVideo(video))
         startActivity(intent)
     }
-
     private fun obtenerCodigoHTMLDelVideo(video: Int): String {
         return when (video) {
             //----------------------------Contenidos----------------------------------------------------------
@@ -125,5 +110,7 @@ class MainActivityMatematica : AppCompatActivity() {
                     "</iframe>"
             else -> ""
         }
+    }
+    override fun onBackPressed() {
     }
 }

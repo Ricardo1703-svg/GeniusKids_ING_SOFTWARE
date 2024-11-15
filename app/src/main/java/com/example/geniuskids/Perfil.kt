@@ -16,50 +16,65 @@ import com.example.geniuskids.Login.AuthActivity
 import com.example.geniuskids.Materias.Materias
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 class Perfil : AppCompatActivity() {
     private lateinit var googleAccountStatus: TextView
-    private lateinit var btnSignOut: Button
+    private lateinit var cerrarSesion: Button
     private lateinit var fotoPerfil: ImageView
     private val PREFS_FILE = "myPrefs"
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_perfil)
 
+        setContentView(R.layout.activity_perfil)
         auth = FirebaseAuth.getInstance()
 
         googleAccountStatus = findViewById(R.id.nombre_perfil)
         fotoPerfil = findViewById(R.id.foto_perfil)
         updateGoogleAccountStatus()
 
-        val cerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
+        cerrarSesion = findViewById(R.id.btnCerrarSesion)
         cerrarSesion.setOnClickListener {
             signOut()
         }
 
-        //-------------------Barra de Nvegacion------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
 
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
+        val username = intent.getStringExtra("username")
+        val profileImageUrl = intent.getStringExtra("profileImageUrl")
 
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
+
+        // Configura el nombre de usuario
+        googleAccountStatus.text = username
+
+        // Carga la imagen de perfil usando Glide
+        Glide.with(this)
+            .load(profileImageUrl)
+            .placeholder(R.drawable.logo)
+            .error(R.drawable.logo)
+            .into(fotoPerfil)
+
+        Barra()
+    }
+
+    fun Barra(){
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        // Establecer el ítem seleccionado en "Profile"
+        bottomNav.selectedItemId = R.id.nav_profile
+
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    startActivity(Intent(this, Materias::class.java))
+                    true
+                }
+                R.id.nav_profile -> true // Ya estamos en Profile
+                else -> false
+            }
         }
-        //-------------------------------------------------------------------------------
     }
 
     private fun signOut() {
@@ -140,6 +155,9 @@ class Perfil : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
     }
 
 }

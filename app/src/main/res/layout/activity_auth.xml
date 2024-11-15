@@ -28,7 +28,7 @@
             android:layout_marginTop="76dp"
             android:background="@drawable/rectangulo"
             android:backgroundTint="#E9F8FA"
-            android:hint="Ingrese su correo"
+            android:hint="Ingrese su Nombre de Usuario"
             android:textColor="#0C0505"
             android:textColorHint="#0B0B0B"
             android:textStyle="bold|italic"
@@ -140,13 +140,14 @@
 
         </com.google.android.gms.common.SignInButton>
 
-        <ImageButton
+        <Button
             android:id="@+id/Anonimo"
             android:layout_width="203dp"
             android:layout_height="46dp"
-            android:background="@drawable/border_background"
-            android:backgroundTint="#121313"
-            android:src="@drawable/fui_ic_anonymous_white_24dp" />
+            android:backgroundTint="#cfd7e0"
+            android:text="Invitado"
+            android:textColor="#000000"
+            app:strokeWidth="5dp"/>
 
         <Button
             android:id="@+id/btnRegistro"

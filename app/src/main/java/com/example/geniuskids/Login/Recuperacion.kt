@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Recuperacion : AppCompatActivity() {
     private lateinit var CorreoS: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,30 +26,38 @@ class Recuperacion : AppCompatActivity() {
         }
         CorreoS = findViewById(R.id.editTextCorreoRecuperacion)
         val Recuperar = findViewById<Button>(R.id.btnVerificar)
-        Recuperar.setOnClickListener {
-            val email = CorreoS.text.toString().trim()
-            if (email.isNotEmpty()) {
-                FirebaseAuth.getInstance().sendPasswordResetEmail(email)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(this,
-                                "Se ha enviado un correo electrónico para restablecer la contraseña",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            finish()
 
-                        } else {
-                            Toast.makeText(
-                                this,
-                                "Error al enviar el correo electrónico para restablecer la contraseña",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
+        Recuperar.setOnClickListener {
+            RecuperaciondeContraseña()
+        }
+    }
+    //Quitar el retroceso en la pantalla
+    override fun onBackPressed() {
+    }
+
+    private fun RecuperaciondeContraseña(){
+        val email = CorreoS.text.toString().trim()
+        if (email.isNotEmpty()) {
+            FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this,
+                            "Se ha enviado un correo electrónico para restablecer la contraseña",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        finish()
+
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Error al enviar el correo electrónico para restablecer la contraseña",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
-            }else{
-                Toast.makeText(this, "Por favor, ingresa tu dirección de correo electrónico", Toast.LENGTH_SHORT)
-                    .show()
-            }
+                }
+        }else{
+            Toast.makeText(this, "Por favor, ingresa tu dirección de correo electrónico", Toast.LENGTH_SHORT)
+                .show()
         }
     }
 }

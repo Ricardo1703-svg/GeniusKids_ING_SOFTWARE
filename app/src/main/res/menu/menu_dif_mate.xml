@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_facil_mate"
+        android:title="Facil"
+        android:icon="@drawable/mate" />
+
+    <item
+        android:id="@+id/nav_intermedio_mate"
+        android:title="Intermedio"
+        android:icon="@drawable/mate" />
+
+    <item
+        android:id="@+id/nav_avanzado_mate"
+        android:title="Avanzado"
+        android:icon="@drawable/mate" />
+</menu>

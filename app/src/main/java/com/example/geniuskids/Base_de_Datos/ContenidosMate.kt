@@ -1,13 +1,12 @@
 package com.example.geniuskids.Base_de_Datos
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.geniuskids.R
-import com.example.geniuskids.videos.WebViewTos
 
 class ContenidosMate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,26 +14,22 @@ class ContenidosMate : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_contenidos_mate)
 
-        val Tema = findViewById<TextView>(R.id.txtTema)
-        val Contenido = findViewById<TextView>(R.id.txtContenido)
+        val username = intent.getStringExtra("username")
+        val profileImageUrl = intent.getStringExtra("profileImageUrl")
 
-        val claveTema = intent.getStringExtra("clave_tema")
-        val claveContenido = intent.getStringExtra("clave_contenido")
+        // Referencia a los elementos del layout
+        val usernameTextView: TextView = findViewById(R.id.usernameTextView)
+        val profileImageView: ImageView = findViewById(R.id.profileImageView)
 
-        val temaId = resources.getIdentifier(claveTema, "string", packageName)
-        val contenidoId = resources.getIdentifier(claveContenido, "string", packageName)
+        // Configura el nombre de usuario
+        usernameTextView.text = username
 
-        val tema = getString(temaId)
-        val contenido = getString(contenidoId)
-
-        Tema.text = "$tema"
-        Contenido.text = "$contenido"
-
-        val ActividadMate = findViewById<Button>(R.id.btnActividad)
-        ActividadMate.setOnClickListener {
-            val intent = Intent(this, WebViewTos::class.java)
-            startActivity(intent)
-        }
+        // Carga la imagen de perfil usando Glide
+        Glide.with(this)
+            .load(profileImageUrl)
+            .placeholder(R.drawable.logo) // Imagen de espera mientras se carga la imagen real
+            .error(R.drawable.logo)       // Imagen de error si no se puede cargar la imagen
+            .into(profileImageView)
 
     }
 }

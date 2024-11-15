@@ -3,23 +3,23 @@ package com.example.geniuskids.Materias
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
 import com.example.geniuskids.niveles.dificultad_ciencias
 import com.example.geniuskids.niveles.dificultad_lenguaje
 import com.example.geniuskids.niveles.dificultad_matematicas
-
+import com.example.geniuskids.niveles.dificultad_sociales
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Materias : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_materias)
+
+        Barra()
 
         val MatematicaClase = findViewById<Button>(R.id.btnIrMatematicas)
         MatematicaClase.setOnClickListener {
@@ -41,29 +41,26 @@ class Materias : AppCompatActivity() {
 
         val SocialesClase = findViewById<Button>(R.id.btnIrSociales)
         SocialesClase.setOnClickListener {
-            val intent = Intent(this, dificultad_lenguaje::class.java)
+            val intent = Intent(this, dificultad_sociales::class.java)
             startActivity(intent)
         }
+    }
+    fun Barra(){
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-        //-------------------Barra de Nvegacion------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
+        bottomNav.selectedItemId = R.id.nav_home
+
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> true
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, Perfil::class.java))
+                    true
+                }
+                else -> false
+            }
         }
-
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
-
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
-        }
-        //-------------------------------------------------------------------------------
-
+    }
+    override fun onBackPressed() {
     }
 }

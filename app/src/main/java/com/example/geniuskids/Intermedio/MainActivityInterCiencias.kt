@@ -5,16 +5,20 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.Materias.Materias
-import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
+import com.example.geniuskids.niveles.dificultad_ciencias
 import com.example.geniuskids.videos.WebViewTosCiencias
 
 class MainActivityInterCiencias : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_inter_ciencias)
+
+        val btnregresar = findViewById<ImageButton>(R.id.btnregresar)
+        btnregresar.setOnClickListener {
+            intent = Intent(this, dificultad_ciencias::class.java)
+            startActivity(intent)
+        }
 
         //----------------------------Barra de Contenidos-------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnCon1Cien)
@@ -42,26 +46,6 @@ class MainActivityInterCiencias : AppCompatActivity() {
         evaluacion2.setOnClickListener {mostrarVideo(6)}
         evaluacion3.setOnClickListener {mostrarVideo(7)}
         evaluacion4.setOnClickListener {mostrarVideo(8)}
-        //------------------------------------------------------------------------------------------
-
-        //----------------------------Barra de Navegacion-------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
-
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
-
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
-        }
         //------------------------------------------------------------------------------------------
     }
 
@@ -125,5 +109,7 @@ class MainActivityInterCiencias : AppCompatActivity() {
             //--------------------------------------------------------------------------------------------------
             else -> ""
         }
+    }
+    override fun onBackPressed() {
     }
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_facil_ciencias"
+        android:title="Facil"
+        android:icon="@drawable/ciencias" />
+
+    <item
+        android:id="@+id/nav_intermedio_ciencias"
+        android:title="Intermedio"
+        android:icon="@drawable/ciencias" />
+
+    <item
+        android:id="@+id/nav_avanzado_ciencias"
+        android:title="Avanzado"
+        android:icon="@drawable/ciencias" />
+</menu>

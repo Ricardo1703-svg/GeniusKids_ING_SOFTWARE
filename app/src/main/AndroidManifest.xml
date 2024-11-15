@@ -18,6 +18,26 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
+            android:name=".videos.WebViewTosSocIntermedio"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+        <activity
+            android:name=".Intermedio.MainActivityInterSociales"
+            android:exported="false" />
+        <activity
+            android:name=".niveles.dificultad_sociales"
+            android:exported="false" />
+        <activity
+            android:name=".videos.WebViewTosSociales"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Materias.MainActivitySociales"
+            android:exported="false" />
+        <activity
+            android:name=".Materias.Materias"
+            android:exported="false" />
+        <activity
             android:name=".videos.WebViewTosCienciasIntermedio"
             android:exported="false" />
         <activity
@@ -99,11 +119,6 @@
         <activity
             android:name=".Materias.MainActivityMatematica"
             android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Materias.Materias"
-            android:exported="false"
-            android:label="@string/title_activity_materias"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Login.Recuperacion"

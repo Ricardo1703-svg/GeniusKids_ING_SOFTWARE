@@ -5,16 +5,20 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
-import com.example.geniuskids.Materias.Materias
-import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
+import com.example.geniuskids.niveles.dificultad_matematicas
 import com.example.geniuskids.videos.WebViewTosMateIntermedio
 
 class MainActivityInterMatematicas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_inter_matematicas)
+
+        val btnregresar = findViewById<ImageButton>(R.id.btnregresar5)
+        btnregresar.setOnClickListener {
+            intent = Intent(this, dificultad_matematicas::class.java)
+            startActivity(intent)
+        }
 
         //----------------------------Barra de Contenidos-------------------------------------------
         val contenido1 = findViewById<Button>(R.id.btnCon1Mate)
@@ -38,27 +42,6 @@ class MainActivityInterMatematicas : AppCompatActivity() {
         btnEvaluacion1.setOnClickListener {mostrarVideo(4)}
         btnEvaluacion2.setOnClickListener {mostrarVideo(5)}
         btnEvaluacion3.setOnClickListener {mostrarVideo(6)}
-        //------------------------------------------------------------------------------------------
-
-
-        //----------------------------Barra de Navegacion-------------------------------------------
-        val Home = findViewById<ImageButton>(R.id.btnHome)
-        Home.setOnClickListener {
-            val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
-
-        val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
-        btnPerfil.setOnClickListener {
-            val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
-
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
-            startActivity(intent)
-        }
         //------------------------------------------------------------------------------------------
     }
 
@@ -110,5 +93,6 @@ class MainActivityInterMatematicas : AppCompatActivity() {
             else -> ""
         }
     }
-
+    override fun onBackPressed() {
+    }
 }

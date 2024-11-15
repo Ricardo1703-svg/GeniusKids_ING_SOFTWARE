@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.geniuskids"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.geniuskids"
@@ -42,7 +42,7 @@ android {
 }
 
 jacoco {
-    toolVersion = "0.8.7"  // Verifica si hay versiones más recientes
+    toolVersion = "0.8.7"
 }
 
 tasks.withType<Test> {
@@ -56,8 +56,8 @@ tasks.register<JacocoReport>("jacocoTestReport") {
     dependsOn(tasks.named("testDebugUnitTest"))
 
     reports {
-        xml.required.set(true)  // Habilita reporte XML
-        html.required.set(true)  // Opcional: habilita reporte HTML
+        xml.required.set(true)
+        html.required.set(true)
     }
 
     classDirectories.setFrom(
@@ -102,11 +102,17 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx:21.0.0")
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("com.google.firebase:firebase-storage-ktx:21.0.1")
+
+    //----------------------------PLAN DE PRUEBAS--------------------------------------------------
+    testImplementation ("io.mockk:mockk:1.13.5")
+    androidTestImplementation ("io.mockk:mockk-android:1.13.5")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //---------------------------------------------------------------------------------------------
 
-    implementation ("androidx.gridlayout:gridlayout:1.0.0")
+    implementation ("androidx.drawerlayout:drawerlayout:1.1.1")
+    implementation ("com.google.android.material:material:1.9.0")
 
     //Mongo
     implementation ("io.realm:realm-android-library:10.10.0")
@@ -118,5 +124,9 @@ dependencies {
 
     //----------------------------Perfil de Google--------------------------------------------------
     implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+
+    //-----------------------------------Animacion con JSON-----------------------------------------
+    implementation ("com.airbnb.android:lottie:6.0.1")
 
 }

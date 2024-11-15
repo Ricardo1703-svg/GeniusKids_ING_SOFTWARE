@@ -5,29 +5,44 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/intermater"
+    android:background="@drawable/ver1"
     tools:context=".Intermedio.MainActivityInterMatematicas">
 
-    <Button
-        android:id="@+id/btnEva1Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="260dp"
-        android:backgroundTint="#F38D8D"
-        android:text="Evaluacion 1"
-        android:textColor="#000000"
-        android:textSize="20sp"
+    <ImageButton
+        android:id="@+id/btnregresar5"
+        android:layout_width="80dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="88dp"
+        android:layout_x="44dp"
+        android:layout_y="36dp"
+        android:background="@drawable/border_background"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="3dp" />
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="386dp"
+        android:layout_height="165dp"
+        android:text="Nivel Intermedio"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
 
     <Button
         android:id="@+id/btnCon2Mate"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="88dp"
         android:backgroundTint="#3C2929"
         android:text="Contenido 2"
         android:textColor="#E8D7D7"
@@ -36,6 +51,66 @@
         app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCon1Mate"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnCon1Mate"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="316dp"
+        android:backgroundTint="#2E2B26"
+        android:text="Contenido 1"
+        android:textColor="#E8D7D7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva3Mate"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#F38D8D"
+        android:text="Evaluacion 3"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva2Mate"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva1Mate"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="380dp"
+        android:backgroundTint="#F38D8D"
+        android:text="Evaluacion 1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnEva2Mate"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="#F38D8D"
+        android:text="Evaluacion 2"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva1Mate"
         app:strokeWidth="3dp" />
 
     <Button
@@ -53,86 +128,4 @@
         app:layout_constraintTop_toBottomOf="@+id/btnCon2Mate"
         app:strokeWidth="3dp" />
 
-    <Button
-        android:id="@+id/btnEva3Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="76dp"
-        android:backgroundTint="#F38D8D"
-        android:text="Evaluacion 3"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva2Mate"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnCon1Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="196dp"
-        android:backgroundTint="#2E2B26"
-        android:text="Contenido 1"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva2Mate"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="92dp"
-        android:backgroundTint="#F38D8D"
-        android:text="Evaluacion 2"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva1Mate"
-        app:strokeWidth="3dp" />
-
-    <LinearLayout
-        android:id="@+id/navigationBar"
-        android:layout_width="0dp"
-        android:layout_height="103dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    <ImageButton
-        android:id="@+id/btnHome"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/cuadrado"
-        android:src="@drawable/diseno_botones"
-        android:text="Home" />
-
-    <ImageButton
-        android:id="@+id/btnMaterias"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/cuadrado"
-        android:src="@drawable/gen"
-        android:text="Back" />
-
-    <ImageButton
-        android:id="@+id/btnPerfil"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/cuadrado"
-        android:src="@drawable/fui_ic_anonymous_white_24dp"
-        android:text="Menu" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

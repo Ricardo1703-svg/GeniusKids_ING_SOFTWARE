@@ -18,3 +18,8 @@ sonarqube {
         property("sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/jacocoTestReport/jacocoTestReport.xml")
     }
 }
+
+dependencies {
+
+
+}

@@ -5,35 +5,66 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/facillengua"
+    android:background="#f4c8a4"
     tools:context=".Materias.MainActivityLenguaje">
+
+    <ImageButton
+        android:id="@+id/btnregresar13"
+        android:layout_width="80dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_x="44dp"
+        android:layout_y="36dp"
+        android:background="@drawable/border_background"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="339dp"
+        android:layout_height="77dp"
+        android:text="Nivel Facil"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <Button
+        android:id="@+id/btnEva3Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="#ffcb90"
+        android:text="Evaluacion 3"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEva2Lenguaje"
+        app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/btnCon1Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="240dp"
         android:backgroundTint="#f98011"
         android:text="Contenido 1"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva1Lenguaje"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="216dp"
-        android:backgroundTint="#ffcb90"
-        android:text="Evaluacion 1"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeWidth="3dp" />
@@ -42,13 +73,13 @@
         android:id="@+id/btnCon2Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#f98011"
         android:text="Contenido 2"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCon1Lenguaje"
         app:strokeWidth="3dp" />
@@ -57,113 +88,75 @@
         android:id="@+id/btnEva2Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="#ffcb90"
         android:text="Evaluacion 2"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEva1Lenguaje"
         app:strokeWidth="3dp" />
 
     <Button
-        android:id="@+id/btnCon3Lenguaje"
+        android:id="@+id/btnEva1Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="84dp"
-        android:backgroundTint="#f98011"
-        android:text="Contenido 3"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon2Lenguaje"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva3Lenguaje"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="304dp"
         android:backgroundTint="#ffcb90"
-        android:text="Evaluacion 3"
+        android:text="Evaluacion 1"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva2Lenguaje"
+        app:layout_constraintTop_toTopOf="parent"
         app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/btnCon4Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="92dp"
         android:backgroundTint="#f98011"
         android:text="Contenido 4"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCon3Lenguaje"
+        app:strokeWidth="3dp" />
+
+    <Button
+        android:id="@+id/btnCon3Lenguaje"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="92dp"
+        android:backgroundTint="#f98011"
+        android:text="Contenido 3"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon2Lenguaje"
         app:strokeWidth="3dp" />
 
     <Button
         android:id="@+id/btnEva4Lenguaje"
         android:layout_width="179dp"
         android:layout_height="65dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#ffcb90"
         android:text="Evaluacion 4"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEva3Lenguaje"
         app:strokeWidth="3dp" />
-
-    <LinearLayout
-        android:id="@+id/navigationBar"
-        android:layout_width="438dp"
-        android:layout_height="75dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/diseno_botones"
-            android:text="Home" />
-
-        <ImageButton
-            android:id="@+id/btnMaterias"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/gen"
-            android:text="Back" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/fui_ic_anonymous_white_24dp"
-            android:text="Menu" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

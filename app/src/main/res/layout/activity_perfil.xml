@@ -55,42 +55,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:strokeWidth="3dp" />
 
-    <LinearLayout
-        android:id="@+id/navigationBar"
-        android:layout_width="431dp"
-        android:layout_height="72dp"
-        android:orientation="horizontal"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#06457f"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/diseno_botones"
-            android:text="Home" />
-
-        <ImageButton
-            android:id="@+id/btnMaterias"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/gen"
-            android:text="Back" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/fui_ic_anonymous_white_24dp"
-            android:text="Menu" />
-
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
