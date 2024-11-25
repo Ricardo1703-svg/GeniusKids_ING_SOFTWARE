@@ -31,10 +31,6 @@ class dificultad_matematicas : AppCompatActivity() {
     }
     fun Barra(){
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        // Establecer el ítem seleccionado en "Home"
-        bottomNav.selectedItemId = R.id.nav_facil_mate
-
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_facil_mate -> {

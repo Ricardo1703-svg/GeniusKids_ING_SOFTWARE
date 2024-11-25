@@ -14,7 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class dificultad_lenguaje : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_dificultad_lenguaje)
 
         val lottieAnimationView = findViewById<LottieAnimationView>(R.id.lottieAnimationView)
@@ -32,10 +31,6 @@ class dificultad_lenguaje : AppCompatActivity() {
 
     fun Barra(){
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        // Establecer el ítem seleccionado en "Home"
-        bottomNav.selectedItemId = R.id.nav_facil_lenguaje
-
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_facil_lenguaje -> {

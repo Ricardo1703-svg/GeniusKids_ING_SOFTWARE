@@ -8,7 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.Materias.MainActivityMatematica
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
@@ -51,12 +50,6 @@ class Nivel : AppCompatActivity() {
         val btnPerfil = findViewById<ImageButton>(R.id.btnPerfil)
         btnPerfil.setOnClickListener {
             val intent = Intent(this, Perfil::class.java)
-            startActivity(intent)
-        }
-
-        val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
-        btnMaterias.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
             startActivity(intent)
         }
     }

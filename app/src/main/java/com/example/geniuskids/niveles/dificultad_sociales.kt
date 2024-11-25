@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
-import com.example.geniuskids.Intermedio.MainActivityInterMatematicas
 import com.example.geniuskids.Intermedio.MainActivityInterSociales
-import com.example.geniuskids.Materias.MainActivityMatematica
 import com.example.geniuskids.Materias.MainActivitySociales
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.R
@@ -32,10 +30,6 @@ class dificultad_sociales : AppCompatActivity() {
     }
     fun Barra(){
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-        // Establecer el ítem seleccionado en "Home"
-        bottomNav.selectedItemId = R.id.nav_facil_sociales
-
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_facil_sociales -> {

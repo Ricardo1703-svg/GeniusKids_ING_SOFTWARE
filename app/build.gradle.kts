@@ -4,6 +4,9 @@ plugins {
     id("com.google.gms.google-services")
     id("org.sonarqube") version "4.3.0.3225"
     id("jacoco")
+
+    //Doumentacion Tecnica
+    id("org.jetbrains.dokka") version "1.9.0"
 }
 
 android {

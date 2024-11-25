@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.Materias.Materias
 
 class Menu : AppCompatActivity() {
@@ -23,12 +22,6 @@ class Menu : AppCompatActivity() {
         val btnMaterias = findViewById<ImageButton>(R.id.btnMaterias)
         btnMaterias.setOnClickListener {
             val intent = Intent(this, Materias::class.java)
-            startActivity(intent)
-        }
-
-        val btnDatos = findViewById<ImageButton>(R.id.btnDatos)
-        btnDatos.setOnClickListener{
-            val intent = Intent(this, Ingresar_Datos::class.java)
             startActivity(intent)
         }
     }

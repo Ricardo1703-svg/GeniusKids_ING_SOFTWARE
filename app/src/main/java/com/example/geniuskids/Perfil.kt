@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.geniuskids.Base_de_Datos.Ingresar_Datos
 import com.example.geniuskids.Login.AuthActivity
 import com.example.geniuskids.Materias.Materias
 import com.google.android.gms.auth.api.signin.GoogleSignIn

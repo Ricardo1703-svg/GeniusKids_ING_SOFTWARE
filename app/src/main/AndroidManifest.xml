@@ -18,9 +18,12 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
-            android:name=".videos.WebViewTosSocIntermedio"
-            android:screenOrientation="landscape"
+            android:name=".Base_de_Datos.Formulario"
             android:exported="false" />
+        <activity
+            android:name=".videos.WebViewTosSocIntermedio"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Intermedio.MainActivityInterSociales"
             android:exported="false" />

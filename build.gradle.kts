@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application") version "8.4.1" apply false
+    id("com.android.application") version "8.6.0" apply false
     id("org.jetbrains.kotlin.android") version "1.9.22" apply false
     id("com.google.gms.google-services") version "4.4.1" apply false
     id ("org.sonarqube") version "4.3.0.3225"
@@ -13,12 +13,11 @@ sonarqube {
         property("sonar.sources", "src/main/java")
         property("sonar.sourceEncoding", "UTF-8")
         property("sonar.login", "admin")
-        property("sonar.password", "Alvares17")
+        property("sonar.password", "SMSS_@05@_43@_22@_Ricardo")
         property("sonar.kotlin.coveragePlugin", "jacoco")
         property("sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/jacocoTestReport/jacocoTestReport.xml")
     }
 }
-
 dependencies {
 
 

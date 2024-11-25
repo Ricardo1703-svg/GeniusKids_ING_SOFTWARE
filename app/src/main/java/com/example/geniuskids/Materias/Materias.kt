@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Base_de_Datos.Formulario
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
 import com.example.geniuskids.niveles.dificultad_ciencias
@@ -16,7 +17,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class Materias : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_materias)
 
         Barra()
@@ -53,6 +53,10 @@ class Materias : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> true
+                R.id.nav_logo -> {
+                    startActivity(Intent(this, Formulario::class.java))
+                    true
+                }
                 R.id.nav_profile -> {
                     startActivity(Intent(this, Perfil::class.java))
                     true
