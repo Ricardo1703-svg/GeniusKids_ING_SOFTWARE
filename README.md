@@ -63,9 +63,8 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [Android Studio for Windosws](https://developer.android.com/studio?hl=es-419) - El Entorno de trabajo usado
+* [Firebase](https://console.firebase.google.com/u/0/) - Manejador de Api para logueo y administrador de la base de datos
 
 ## Contribuyendo 🖇️
 
