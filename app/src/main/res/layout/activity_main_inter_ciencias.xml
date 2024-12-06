@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondociencias"
-    tools:context=".Intermedio.MainActivityInterCiencias">
+    tools:context=".Materias.Ciencias.Intermedio">
 
 
     <ImageButton
@@ -40,125 +40,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.16" />
 
-    <Button
-        android:id="@+id/btnEva1Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="296dp"
-        android:backgroundTint="#8b9bcf"
-        android:text="Evaluacion 1"
-        android:textColor="#000000"
-        android:textSize="20sp"
+    <ScrollView
+        android:layout_width="428dp"
+        android:layout_height="730dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="3dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-    <Button
-        android:id="@+id/btnCon2Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="68dp"
-        android:backgroundTint="#194aa7"
-        android:text="Contenido 2"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon1Cien"
-        app:strokeWidth="3dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/btnEva4Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="88dp"
-        android:backgroundTint="#8b9bcf"
-        android:text="Evaluacion 4"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva3Cien"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnCon1Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="232dp"
-        android:backgroundTint="#194aa7"
-        android:text="Contenido 1"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva2Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="72dp"
-        android:backgroundTint="#8b9bcf"
-        android:text="Evaluacion 2"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva1Cien"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnEva3Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="112dp"
-        android:backgroundTint="#8b9bcf"
-        android:text="Evaluacion 3"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEva2Cien"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnCon4Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#194aa7"
-        android:text="Contenido 4"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon3Cien"
-        app:strokeWidth="3dp" />
-
-    <Button
-        android:id="@+id/btnCon3Cien"
-        android:layout_width="179dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="96dp"
-        android:backgroundTint="#194aa7"
-        android:text="Contenido 3"
-        android:textColor="#E8D7D7"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCon2Cien"
-        app:strokeWidth="3dp" />
-
-
+            <LinearLayout
+                android:id="@+id/layoutVideos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

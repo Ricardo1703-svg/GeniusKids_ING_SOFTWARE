@@ -5,11 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ovalo"
-    tools:context=".Menu">
+    tools:context=".Invitado.Menu">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/menuMatematicas2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/matematicasmenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
+
+    <Button
+        android:id="@+id/btnIrinvitado"
+        android:layout_width="150dp"
+        android:layout_height="163dp"
+        android:backgroundTint="#00D83D3D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="5dp" />
 
     <View
         android:id="@+id/view4"
-        android:layout_width="439dp"
+        android:layout_width="match_parent"
         android:layout_height="99dp"
         android:background="#323E3E"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,7 +42,9 @@
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/radius"
+        app:strokeWidth="3dp" />
 
     <TextView
         android:id="@+id/textView_titulo"
@@ -33,99 +60,66 @@
         app:layout_constraintTop_toTopOf="@+id/view4"
         app:layout_constraintVertical_bias="0.522" />
 
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/menuMatematicas"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/matematicasmenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.801"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627"
-        app:shapeAppearanceOverlay="@style/radius" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/menuLenguaje"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/lenguajemenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627"
-        app:shapeAppearanceOverlay="@style/radius" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/menuCiencias"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/cienciasmenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.801"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291"
-        app:shapeAppearanceOverlay="@style/radius" />
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/menuSociales"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/socialesmenu"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido al modo invitado de Geniuskids"
+        android:textAlignment="center"
+        android:textColor="#EFEBEB"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="te damos la oportunidad de probar el nivel facil de la asignatura de matemáticas"
+        android:textAlignment="center"
+        android:textColor="#EFEBEB"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O te invitamos a loguearte por Google o registrarte mediante correo electronico"
+        android:textAlignment="center"
+        android:textColor="#EFEBEB"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="179dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="776dp"
+        android:backgroundTint="#194aa7"
+        android:text="Salir"
+        android:textColor="#E8D7D7"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291"
-        app:shapeAppearanceOverlay="@style/radius"
         app:strokeWidth="3dp" />
-
-    <LinearLayout
-        android:id="@+id/navigationBar"
-        android:layout_width="0dp"
-        android:layout_height="103dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnDatos"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/diseno_botones"
-            android:text="Home" />
-
-        <ImageButton
-            android:id="@+id/btnMaterias"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/gen"
-            android:text="Back" />
-
-        <ImageButton
-            android:id="@+id/btnPerfil"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/cuadrado"
-            android:src="@drawable/fui_ic_anonymous_white_24dp"
-            android:text="Menu" />
-
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

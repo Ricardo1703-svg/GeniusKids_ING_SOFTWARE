@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/fondo"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".Base_de_Datos.Formulario">
 
@@ -16,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:hint="Nombre del Contenido/Actividad"
-        android:textColor="@color/black" />
+        android:textColor="#E7E0E0"
+        android:textColorHint="#E7E0E0" />
 
     <!-- Campo para URL del video -->
     <EditText
@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:hint="URL del Contenido/Actividad"
-        android:textColor="@color/black" />
+        android:textColor="#E7E0E0"
+        android:textColorHint="#E7E0E0" />
 
     <!-- Grupo de botones para categoría -->
     <RadioGroup
@@ -39,13 +40,17 @@
             android:id="@+id/radioContenido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contenido" />
+            android:text="Contenido"
+            android:textColor="#E7E0E0"
+            android:textColorHint="#000000" />
 
         <RadioButton
             android:id="@+id/radioActividad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Actividad" />
+            android:text="Actividad"
+            android:textColor="#E7E0E0"
+            android:textColorHint="#000000" />
     </RadioGroup>
 
     <!-- Spinner para materias -->
@@ -60,6 +65,19 @@
         android:id="@+id/spinnerDificultad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Número de orden -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orden (1-5):"
+        android:layout_marginBottom="8dp" />
+
+    <NumberPicker
+        android:id="@+id/numberPickerOrder"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="16dp" />
 
     <!-- Botón para mostrar videos -->

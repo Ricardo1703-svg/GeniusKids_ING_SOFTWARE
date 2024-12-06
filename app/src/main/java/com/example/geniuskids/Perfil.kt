@@ -22,6 +22,7 @@ class Perfil : AppCompatActivity() {
     private lateinit var googleAccountStatus: TextView
     private lateinit var cerrarSesion: Button
     private lateinit var fotoPerfil: ImageView
+    private lateinit var btnpreguntas: ImageButton
     private val PREFS_FILE = "myPrefs"
     private lateinit var auth: FirebaseAuth
 
@@ -40,6 +41,12 @@ class Perfil : AppCompatActivity() {
             signOut()
         }
 
+        btnpreguntas = findViewById(R.id.btnPreguntas)
+        btnpreguntas.setOnClickListener {
+            val intent = Intent(this, Perfil_web::class.java)
+            intent.putExtra("VIDEO_URL", "https://ricardo1703-svg.github.io/Repositorios/app_GeniusKids/Preguntas.html")
+            startActivity(intent)
+        }
 
         val username = intent.getStringExtra("username")
         val profileImageUrl = intent.getStringExtra("profileImageUrl")

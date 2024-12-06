@@ -7,7 +7,18 @@ plugins {
 
     //Doumentacion Tecnica
     id("org.jetbrains.dokka") version "1.9.0"
+
+    id ("io.gitlab.arturbosch.detekt") version "1.23.1"
 }
+
+tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+    reports {
+        html.required.set(true)  // Generar reporte HTML
+        txt.required.set(false)  // Desactiva reporte en TXT si no lo necesitas
+        xml.required.set(false)  // Desactiva reporte en XML si no lo necesitas
+    }
+}
+
 
 android {
     namespace = "com.example.geniuskids"

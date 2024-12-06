@@ -2,56 +2,102 @@ package com.example.geniuskids.niveles
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
-import com.example.geniuskids.Materias.MainActivityLenguaje
+import com.example.geniuskids.Materias.Lenguaje.Basico
+import com.example.geniuskids.Materias.Lenguaje.Intermedio
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class dificultad_lenguaje : AppCompatActivity() {
+
+    private val db = FirebaseFirestore.getInstance()
+    private lateinit var btnFacil: Button
+    private lateinit var btnIntermedio: Button
+    private lateinit var btnDificil: Button
+    private lateinit var btnRegresar: ImageButton
+    private lateinit var lottieAnimationView: LottieAnimationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dificultad_lenguaje)
 
-        val lottieAnimationView = findViewById<LottieAnimationView>(R.id.lottieAnimationView)
+        // Configuración de animación
+        lottieAnimationView = findViewById(R.id.lottieAnimationView)
         lottieAnimationView.setAnimation(R.raw.lenguaje)
         lottieAnimationView.playAnimation()
 
-        val btnregresar = findViewById<ImageButton>(R.id.btnregresar11)
-        btnregresar.setOnClickListener {
-            intent = Intent(this, Materias::class.java)
+        // Botón para regresar a "Materias"
+        btnRegresar = findViewById<ImageButton>(R.id.btnregresar11)
+        btnRegresar.setOnClickListener {
+            val intent = Intent(this, Materias::class.java)
             startActivity(intent)
         }
 
-        Barra()
+        // Configuración de botones
+        configurarBotones()
+
+        // Verifica el acceso a la dificultad "Intermedio"
+        verificarProgresoParaIntermedio()
     }
 
-    fun Barra(){
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_facil_lenguaje -> {
-                    startActivity(Intent(this, MainActivityLenguaje::class.java))
-                    true
-                }
-                R.id.nav_intermedio_lenguaje -> {
+    private fun configurarBotones() {
+        btnFacil = findViewById(R.id.btnFacil)
+        btnIntermedio = findViewById(R.id.btnIntermedio)
+        btnDificil = findViewById(R.id.btnDificil)
 
-                    //startActivity(Intent(this, MainActivityInterLenguaje::class.java))
-                    true
-                }
-                /**
-                R.id.nav_avanzado_ciencias -> {
-                startActivity(Intent(this, Niveles::class.java))
-                true
-                }
-                 **/
-                else -> false
+        // Deshabilitar el botón de Intermedio por defecto
+        btnIntermedio.isEnabled = true
+
+        // Acción del botón Fácil
+        btnFacil.setOnClickListener {
+            val intent = Intent(this, Basico::class.java)
+            startActivity(intent)
+        }
+
+        // Acción del botón Intermedio
+        btnIntermedio.setOnClickListener {
+            if (btnIntermedio.isEnabled) {
+                val intent = Intent(this, Intermedio::class.java)
+                startActivity(intent)
+            } else {
+                // Mostrar mensaje si no se ha desbloqueado la dificultad
+                Toast.makeText(this, "Debes completar todos los videos de la dificultad 'Fácil' primero", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // Acción del botón Difícil (puedes configurar esto en el futuro)
+        btnDificil.setOnClickListener {
+            Toast.makeText(this, "Esta dificultad aún no está disponible", Toast.LENGTH_SHORT).show()
+        }
     }
+
+    private fun verificarProgresoParaIntermedio() {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        db.collection("user_Google").document(userId).get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val progresoFacil = document.getLong("Lenguaje.Facil") ?: 0
+                    val totalVideosFacil = 5 // Número total de videos/actividades en "Fácil"
+
+                    if (progresoFacil >= totalVideosFacil) {
+                        // Habilitar el botón Intermedio si el progreso es suficiente
+                        btnIntermedio.isEnabled = true
+                    }
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Error al verificar el progreso: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
     override fun onBackPressed() {
+        // No permitir retroceder
     }
 }

@@ -159,16 +159,26 @@
             android:textStyle="bold|italic" />
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/btnAyuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#00181010"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="118dp"
         android:layout_height="140dp"
         app:layout_constraintBottom_toTopOf="@+id/Campos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192"
+        app:layout_constraintVertical_bias="0.352"
         app:srcCompat="@drawable/logo" />
 
 

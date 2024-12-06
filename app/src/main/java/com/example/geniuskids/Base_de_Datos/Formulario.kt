@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.NumberPicker
 import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.TextView
@@ -21,7 +22,9 @@ class Formulario : AppCompatActivity() {
     private lateinit var radioGroupCategory: RadioGroup
     private lateinit var spinnerMateria: Spinner
     private lateinit var spinnerDificultad: Spinner
+    private lateinit var numberPickerOrder: NumberPicker
     private lateinit var buttonSave: Button
+
     private lateinit var buttonShowVideos: Button
     private lateinit var txterror: TextView
 
@@ -39,6 +42,7 @@ class Formulario : AppCompatActivity() {
         spinnerMateria = findViewById(R.id.spinnerMateria)
         spinnerDificultad = findViewById(R.id.spinnerDificultad)
         buttonSave = findViewById(R.id.buttonSave)
+        numberPickerOrder = findViewById(R.id.numberPickerOrder)
         buttonShowVideos = findViewById(R.id.buttonShowVideos)
         txterror = findViewById(R.id.txterror)
 
@@ -54,6 +58,11 @@ class Formulario : AppCompatActivity() {
         dificultadAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerDificultad.adapter = dificultadAdapter
 
+        // Configurar el NumberPicker
+        numberPickerOrder.minValue = 1
+        numberPickerOrder.maxValue = 5
+        numberPickerOrder.value = 1 // Valor predeterminado
+
         // Configurar eventos de los botones
         buttonSave.setOnClickListener {
             saveVideoUrl()
@@ -67,48 +76,54 @@ class Formulario : AppCompatActivity() {
     private fun saveVideoUrl() {
         val videoName = editTextVideoName.text.toString().trim()
         val videoUrl = editTextVideoUrl.text.toString().trim()
-
-        // Obtener la categoría seleccionada
         val selectedCategoryId = radioGroupCategory.checkedRadioButtonId
+        val orderNumber = numberPickerOrder.value
+        val materia = spinnerMateria.selectedItem.toString()
+        val dificultad = spinnerDificultad.selectedItem.toString()
+
+        // Determinar la categoría seleccionada
         val category = when (selectedCategoryId) {
             R.id.radioContenido -> "contenido"
             R.id.radioActividad -> "actividad"
             else -> ""
         }
 
-        // Obtener la materia y dificultad seleccionadas
-        val materia = spinnerMateria.selectedItem.toString()
-        val dificultad = spinnerDificultad.selectedItem.toString()
-
-        // Validar los campos
-        if (videoName.isEmpty() || videoUrl.isEmpty() || category.isEmpty() || materia.isEmpty() || dificultad.isEmpty()) {
+        // Validar que todos los campos estén completos
+        if (videoName.isEmpty() || videoUrl.isEmpty() || category.isEmpty()) {
             Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
 
-        // Crear un mapa para almacenar los datos
+        // Crear el mapa de datos para Firestore
         val videoData = hashMapOf(
             "videoName" to videoName,
             "videoUrl" to videoUrl,
             "category" to category,
             "materia" to materia,
-            "dificultad" to dificultad
+            "dificultad" to dificultad,
+            "orderNumber" to orderNumber
         )
 
         // Guardar los datos en Firestore
         db.collection("videos").add(videoData)
             .addOnSuccessListener {
                 Toast.makeText(this, "Video guardado exitosamente", Toast.LENGTH_SHORT).show()
-                // Limpiar los campos después de guardar
-                editTextVideoName.text.clear()
-                editTextVideoUrl.text.clear()
-                radioGroupCategory.clearCheck()
-                spinnerMateria.setSelection(0)
-                spinnerDificultad.setSelection(0)
+                limpiarFormulario()
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Error al guardar: ${e.message}", Toast.LENGTH_SHORT).show()
                 txterror.text = "Error al guardar: ${e.message}"
+                txterror.visibility = TextView.VISIBLE
             }
+    }
+
+    private fun limpiarFormulario(){
+       // editTextVideoName.text.clear()
+        editTextVideoUrl.text.clear()
+        //radioGroupCategory.clearCheck()
+        //numberPickerOrder.value = 1
+        //spinnerMateria.setSelection(0)
+        //spinnerDificultad.setSelection(0)
+        //txterror.visibility = TextView.GONE
     }
 }

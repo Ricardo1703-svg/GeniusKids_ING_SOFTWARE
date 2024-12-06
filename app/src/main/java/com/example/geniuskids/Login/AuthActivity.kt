@@ -10,6 +10,9 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.geniuskids.Base_de_Datos.Progress
+import com.example.geniuskids.Base_de_Datos.UserGoogle
+import com.example.geniuskids.Invitado.Menu
 import com.example.geniuskids.Materias.Materias
 import com.example.geniuskids.Perfil
 import com.example.geniuskids.R
@@ -22,7 +25,6 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -35,6 +37,7 @@ class AuthActivity : AppCompatActivity() {
     private lateinit var OjoMostrar: ImageView
     private lateinit var correo: EditText
     private lateinit var contra: EditText
+    private lateinit var ayuda: ImageButton
     private lateinit var gso: GoogleSignInOptions
     private lateinit var googleSignInClient: GoogleSignInClient
     private var passwordVisible = false
@@ -53,6 +56,11 @@ class AuthActivity : AppCompatActivity() {
         initializeDataIfNeeded()
 
         db = Firebase.firestore
+
+        ayuda = findViewById(R.id.btnAyuda)
+        ayuda.setOnClickListener {
+            mostrarVideo(3)
+        }
 
         val sharedPreferences = getSharedPreferences(PREFS_FILE, Context.MODE_PRIVATE)
         val googleSignIn = sharedPreferences.getBoolean("googleSignIn", false)
@@ -107,12 +115,36 @@ class AuthActivity : AppCompatActivity() {
         Toast.makeText(this, "La acción de retroceso está deshabilitada en esta pantalla", Toast.LENGTH_SHORT).show()
     }
 
+    private fun mostrarVideo(video: Int) {
+        val intent = Intent(this, Ayuda_auth::class.java)
+        intent.putExtra("VIDEO_HTML", obtenerCodigoHTMLDelVideo(video))
+        startActivity(intent)
+    }
+    private fun obtenerCodigoHTMLDelVideo(video: Int): String {
+        return when (video) {
+            1 -> "<iframe width=\"100%\" height=\"100%\" src=\"https://drive.google.com/file/d/1DmqeF-JsBk44PHBohJD-nhOLieNfSlct/preview\"" +
+                    "title=\"YouTube video player\" frameborder=\"0\" allow=\"autoplay\"; clipboard-write;" +
+                    "encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"" +
+                    "strict-origin-when-cross-origin\" allowfullscreen>" +
+                    "</iframe>"
+
+            2 -> "<iframe src=\"https://drive.google.com/file/d/1DmqeF-JsBk44PHBohJD-nhOLieNfSlct/preview\" " +
+                    "width=\"100%\" height=\"100%\" allow=\"autoplay\">" +
+                    "</iframe>"
+
+            3 -> "https://youtube.com/shorts/4m-48AaJb84?feature=share"
+
+
+            else -> ""
+        }
+    }
+
     private fun Invitado(){
         FirebaseAuth.getInstance().signInAnonymously()
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Log.d("AnonymousLoginActivity", "Inicio de sesión anónimo exitoso")
-                    val intent = Intent(this, Materias::class.java)
+                    val intent = Intent(this, Menu::class.java)
                     startActivity(intent)
                 } else {
                     Log.w(
@@ -228,37 +260,59 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun checkIfUserExists(user: FirebaseUser) {
-        val database = FirebaseDatabase.getInstance().reference
-        val userReference = database.child("users").child(user.uid)
+        val userId = user.uid
 
-        userReference.get().addOnSuccessListener { dataSnapshot ->
-            if (!dataSnapshot.exists()) {
-                saveUserToDatabase(user)
+        // Verificar en Firestore si el usuario ya existe
+        firestore.collection("user_Google")
+            .document(userId)
+            .get()
+            .addOnSuccessListener { document ->
+                if (!document.exists()) {
+                    saveUserToFirestore(user)
+                }
             }
-        }.addOnFailureListener { exception ->
-            Log.w("AuthActivity", "Error checking user existence", exception)
-        }
+            .addOnFailureListener { exception ->
+                Log.w("AuthActivity", "Error checking user existence", exception)
+            }
     }
 
-    private fun saveUserToDatabase(user: FirebaseUser) {
-        val database = FirebaseDatabase.getInstance().reference
-        val userReference = database.child("users").child(user.uid)
-
-        val userData = mapOf(
-            "uid" to user.uid,
-            "name" to (user.displayName ?: ""),
-            "email" to (user.email ?: ""),
-            "photoUrl" to (user.photoUrl?.toString() ?: "")
+    private fun saveUserToFirestore(user: FirebaseUser) {
+        val userId = user.uid
+        val userData = UserGoogle(
+            uid = user.uid,
+            name = user.displayName ?: "",
+            email = user.email ?: "",
+            photoUrl = user.photoUrl?.toString() ?: "",
+            progress = Progress() // Progreso inicializado
         )
 
-        userReference.setValue(userData).addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                Log.d("AuthActivity", "User saved to database successfully")
-            } else {
-                Log.w("AuthActivity", "Failed to save user to database", task.exception)
+        firestore.collection("user_Google")
+            .document(user.uid)
+            .set(userData)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d("AuthActivity", "User saved to Firestore successfully")
+                } else {
+                    Log.w("AuthActivity", "Failed to save user to Firestore", task.exception)
+                }
             }
-        }
+        firestore.collection("user_Google")
+            .document(userId)
+            .get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val user = document.toObject(UserGoogle::class.java)
+                    Log.d("Firestore", "Usuario: $user")
+                } else {
+                    Log.d("Firestore", "El usuario no existe en Firestore")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w("Firestore", "Error al obtener el usuario", exception)
+            }
+
     }
+
 
     private fun togglePasswordVisibility() {
         if (!passwordVisible) {

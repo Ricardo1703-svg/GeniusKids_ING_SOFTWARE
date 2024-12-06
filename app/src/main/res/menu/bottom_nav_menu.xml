@@ -5,13 +5,16 @@
         android:title="Materias"
         android:icon="@drawable/ic_home_black_24dp" />
 
+    <!--Quitar Para no Admins o sea Yo el Tipo
     <item
         android:id="@+id/nav_logo"
         android:title="GeniusKids"
         android:icon="@drawable/gen" />
+        -->
 
     <item
         android:id="@+id/nav_profile"
         android:title="Perfil"
         android:icon="@drawable/usuario" />
+
 </menu>

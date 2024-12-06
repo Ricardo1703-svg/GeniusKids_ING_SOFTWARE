@@ -18,33 +18,74 @@
         android:theme="@style/Theme.GeniusKids"
         tools:targetApi="31">
         <activity
-            android:name=".Base_de_Datos.Formulario"
-            android:exported="false" />
+            android:name=".Materias.Ayuda_Materia"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
-            android:name=".videos.WebViewTosSocIntermedio"
+            android:name=".Login.Ayuda_auth"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Perfil_web"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Materias.Sociales.WebviewTosAvanSociales"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Materias.Sociales.Avanzado"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Invitado.web_prueba"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Intermedio.MainActivityInterSociales"
-            android:exported="false" />
+            android:name=".Invitado.Mate_prueba"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Materias.Lenguaje.WebViewTosLenguaIntermedio"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Materias.Lenguaje.Intermedio"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Base_de_Datos.Formulario"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Materias.Sociales.WebViewTosSocIntermedio"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Materias.Sociales.Intermedio"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".niveles.dificultad_sociales"
             android:exported="false" />
         <activity
-            android:name=".videos.WebViewTosSociales"
+            android:name=".Materias.Sociales.WebViewTosSociales"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Materias.MainActivitySociales"
-            android:exported="false" />
+            android:name=".Materias.Sociales.Basico"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Materias.Materias"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".videos.WebViewTosCienciasIntermedio"
-            android:exported="false" />
+            android:name=".Materias.Ciencias.WebViewTosCienciasIntermedio"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
-            android:name=".Intermedio.MainActivityInterCiencias"
+            android:name=".Materias.Ciencias.Intermedio"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -56,27 +97,27 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".videos.WebViewTosMateIntermedio"
+            android:name=".Materias.Matematicas.WebViewTosMateIntermedio"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Intermedio.MainActivityInterMatematicas"
+            android:name=".Materias.Matematicas.Intermedio"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".videos.WebViewTosLengua"
+            android:name=".Materias.Lenguaje.WebViewTosLengua"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Materias.MainActivityLenguaje"
+            android:name=".Materias.Lenguaje.Basico"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".videos.WebViewTosCiencias"
+            android:name=".Materias.Ciencias.WebViewTosCiencias"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Materias.MainActivityCiencias"
+            android:name=".Materias.Ciencias.Basico"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -88,27 +129,15 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Base_de_Datos.DetalleContenidoActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Base_de_Datos.VisualizarDatos"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Base_de_Datos.Ingresar_Datos"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Perfil"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Menu"
+            android:name=".Invitado.Menu"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".videos.WebViewTos"
+            android:name=".Materias.Matematicas.WebViewTos"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -116,11 +145,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Base_de_Datos.ContenidosMate"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Materias.MainActivityMatematica"
+            android:name=".Materias.Matematicas.Basico"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
