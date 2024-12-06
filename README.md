@@ -25,9 +25,11 @@ Para Desarrolladores
         * Descárgalo desde Oracle o usa una versión OpenJDK (como AdoptOpenJDK).
 
 3- Dispositivo o Emulador Android
-
         * Un dispositivo físico con depuración USB habilitada o un emulador configurado en Android Studio.
         * La versión de Android debe cumplir con el nivel mínimo de API de la aplicación.
+
+Solicita las claves API o archivos de configuración necesarios, como google-services.json.
+Asegúrarse de configurar el proyecto correctamente en el panel correspondiente (El caso, en Firebase Console).
 ```
 
 ### Instalación 🔧
@@ -37,7 +39,13 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 _Dí cómo será ese paso_
 
 ```
-Da un ejemplo
+1- Dispositivo Android
+       * Asegúrate de que el dispositivo cumple con:
+              ° Versión mínima de Android: Android 8.0 (API 26) o superior.
+              ° Espacio de almacenamiento suficiente para la app y sus datos.
+
+2- APK o Acceso al Play Store
+       * Solicita el archivo .apk al desarrollador.
 ```
 
 _Y repite_
