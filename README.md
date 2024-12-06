@@ -117,6 +117,6 @@ Para analizar tu proyecto con Detekt:
 
 * **Jeison Baldomar Ventura Sorto**	- *Scrum Master - Lider*
 * **Ricardo Alexander Alvarez Portillo** *Scrum Team - Backend* [RichDev](https://github.com/Ricardo1703-svg)
-* **Edvin Abelardo Guevara Vasquez**  *Scrum Team - Product owner*
+* **Edvin Abelardo Guevara Vasquez**  *Scrum Team - Product owner* [Edvin0001001]([https://github.com/Ricardo1703-svg](https://github.com/Edvin0001001))
 * **Karla Lisseth Lopez Herrera** - *Scrum Team - Frontend/Tester*
 
