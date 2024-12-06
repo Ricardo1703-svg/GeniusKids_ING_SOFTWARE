@@ -1,6 +1,6 @@
 # GeniusKids
 
-_Acá va un párrafo que describa lo que es el proyecto_
+GeniusKids, es un proyecto de una aplicación educativa que ofrece contenido interactivo en las cuatro materias básicas, donde los estudiantes podrán acceder a una amplia gama de contenidos, minijuegos y evaluaciones, adaptadas a diferentes niveles de dificultad, desde lo más básico hasta lo más avanzado en cada materia.
 
 ## Comenzando 🚀
 
@@ -82,8 +82,6 @@ Y por ultimo.
               o Android Studio descargará todos los archivos del repositorio y configurará el proyecto automáticamente.
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
 ## Ejecutando las pruebas ⚙️
 
 Ejecutamos las pruebas teniendo en el build.gradle el JUnit o Mockito y usa el siguiente comando:
@@ -92,8 +90,6 @@ Ejecutamos las pruebas teniendo en el build.gradle el JUnit o Mockito y usa el s
 ```
 
 ### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
 Ingresar con cuentas diferentes de Google y luego de ingresar mantiene la sesion del usuario abierta		
 
 ```
@@ -102,8 +98,6 @@ Al cerrar la app el estado de la cuenta se guarda y no se requiere loguearse den
 ```
 
 ### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
 Para personalizar las reglas, puedes generar un archivo de configuración:
 ```
 ./gradlew detektGenerateConfig
@@ -114,53 +108,15 @@ Para analizar tu proyecto con Detekt:
 ./gradlew detekt
 ```
 
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [Android Studio for Windosws](https://developer.android.com/studio?hl=es-419) - El Entorno de trabajo usado
 * [Firebase](https://console.firebase.google.com/u/0/) - Manejador de Api para logueo y administrador de la base de datos
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
 ## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Jeison Baldomar Ventura Sorto**	- *Scrum Master - Lider*
 * **Ricardo Alexander Alvarez Portillo** *Scrum Team - Backend* [RichDev](https://github.com/Ricardo1703-svg)
 * **Edvin Abelardo Guevara Vasquez**  *Scrum Team - Product owner*
 * **Karla Lisseth Lopez Herrera** - *Scrum Team - Frontend/Tester*
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
