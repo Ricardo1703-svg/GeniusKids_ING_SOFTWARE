@@ -33,11 +33,6 @@ Asegúrarse de configurar el proyecto correctamente en el panel correspondiente 
 ```
 
 ### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
 ```
 1- Dispositivo Android
        * Asegúrate de que el dispositivo cumple con:
@@ -91,22 +86,32 @@ _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para 
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+Ejecutamos las pruebas teniendo en el build.gradle el JUnit o Mockito y usa el siguiente comando:
+```
+./gradlew testDebugUnitTest
+```
 
 ### Analice las pruebas end-to-end 🔩
 
 _Explica que verifican estas pruebas y por qué_
+Ingresar con cuentas diferentes de Google y luego de ingresar mantiene la sesion del usuario abierta		
 
 ```
-Da un ejemplo
+Entrar sin nigun problema		                                                               Como se esperaba		
+Al cerrar la app el estado de la cuenta se guarda y no se requiere loguearse denuevo		Como se esperaba		
 ```
 
 ### Y las pruebas de estilo de codificación ⌨️
 
 _Explica que verifican estas pruebas y por qué_
-
+Para personalizar las reglas, puedes generar un archivo de configuración:
 ```
-Da un ejemplo
+./gradlew detektGenerateConfig
+```
+
+Para analizar tu proyecto con Detekt:
+```
+./gradlew detekt
 ```
 
 ## Despliegue 📦
