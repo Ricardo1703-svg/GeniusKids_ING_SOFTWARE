@@ -48,10 +48,48 @@ _Dí cómo será ese paso_
        * Solicita el archivo .apk al desarrollador.
 ```
 
-_Y repite_
-
+### Clonar repositorio en Android Studio
+_Pre-requisitos
 ```
-hasta finalizar
+       1.Android Studio instalado.
+       2.Git instalado en tu sistema.
+              o Descárgalo desde aquí si no lo tienes.
+              o Asegúrate de configurarlo con tu usuario y correo:
+```
+```sh
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@example.com"
+```
+```
+3- URL del repositorio a clonar.
+
+https://github.com/Ricardo1703-svg/GeniusKids_ING_SOFTWARE.git
+```
+
+ _Pasos para clonar un repositorio:
+```
+       1.Abre Android Studio.
+              o Si estás en la pantalla de bienvenida, selecciona "Get from VCS" (Obtener del control de versiones).
+              o Si ya tienes un proyecto abierto, ve a File > New > Project from Version Control.
+
+       2.Selecciona el sistema de control de versiones:
+              o En la ventana que aparece, selecciona Git.
+
+       3.Introduce la URL del repositorio:
+              o En el campo de texto, pega la URL del repositorio que deseas clonar (por ejemplo el de nuestro proyecto: https://github.com/Ricardo1703-svg/GeniusKids_ING_SOFTWARE.git).
+
+       4.Selecciona la ruta de destino:
+              o Escoge la carpeta en tu computadora donde se clonará el proyecto.
+
+       5. Inicia el clonado:
+              o Haz clic en el botón Clone.
+
+       6.Autenticación (si es necesario):
+              o Si el repositorio requiere autenticación, Android Studio solicitará tus credenciales de GitHub, GitLab, Bitbucket, o cualquier otro servicio. Asegúrate de tenerlas listas.
+
+       7.Espera a que se descargue el proyecto:
+              o Android Studio descargará todos los archivos del repositorio y configurará el proyecto automáticamente.
+
 ```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
