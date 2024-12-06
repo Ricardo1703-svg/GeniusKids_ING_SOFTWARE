@@ -14,7 +14,20 @@ Mira **Deployment** para conocer como desplegar el proyecto.
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Da un ejemplo
+Para Desarrolladores
+1- Android Studio
+        * Descarga e instala Android Studio desde su sitio oficial.
+        * Configura el SDK de Android:
+                ° Asegúrate de instalar el SDK de la versión mínima requerida por la app (especificado en build.gradle).
+                ° Añade herramientas necesarias como Android Emulator y SDK Platform Tools.
+2- Java Development Kit (JDK)
+        * La app requiere JDK 11 o superior.
+        * Descárgalo desde Oracle o usa una versión OpenJDK (como AdoptOpenJDK).
+
+3- Dispositivo o Emulador Android
+
+        * Un dispositivo físico con depuración USB habilitada o un emulador configurado en Android Studio.
+        * La versión de Android debe cumplir con el nivel mínimo de API de la aplicación.
 ```
 
 ### Instalación 🔧
